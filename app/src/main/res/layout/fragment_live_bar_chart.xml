@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nl.wittig.net2grid.liveUsage.fragments.LiveBarChartFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/fragment_live_bar_chart_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/fragment_live_bar_chart_no_data_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.Helvetica.Italic"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:text="@string/no_data_searching"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</FrameLayout>

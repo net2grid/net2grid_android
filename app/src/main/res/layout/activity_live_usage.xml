@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@+id/activity_live_usage_drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimaryDark"
+        tools:context="nl.wittig.net2grid.liveUsage.LiveUsageActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    android:theme="@style/AppTheme.AppBarOverlay">
+
+                    <FrameLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/activity_live_usage_menu_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/icon_menu"
+                            android:background="#00000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#fff"
+                            android:textSize="40sp"
+                            android:textAppearance="@style/TextAppearance.FoxAndCat"
+                            android:text="@string/app_name"/>
+                    </FrameLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+                            android:textAppearance="@style/TextAppearance.Helvetica.Light"
+                            android:gravity="center"
+                            android:text="@string/power_usage_chart_title"/>
+
+                        <TextView
+                            android:id="@+id/w24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:textSize="55sp"
+                            android:textAppearance="@style/TextAppearance.Helvetica.Bold"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="-"/>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/power_usage_chart"
+                                android:layout_width="match_parent"
+                                android:visibility="visible"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="45dp" />
+
+                            <LinearLayout
+                                android:id="@+id/activity_live_usage_chart_placeholder"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="45dp"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_marginTop="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="30dp"
+                                    android:paddingRight="30dp"
+                                    android:textColor="@color/white"
+                                    android:textAppearance="@style/TextAppearance.Helvetica.Italic"
+                                    android:gravity="center"
+                                    android:textSize="18sp"
+                                    android:textStyle="italic"
+                                    android:text="@string/no_data_searching"/>
+
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-13dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/activity_live_usage_min_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:textColor="#fff"
+                                android:textAppearance="@style/TextAppearance.Helvetica.Light"
+                                android:text="2000"/>
+
+                            <TextView
+                                android:id="@+id/activity_live_usage_interval"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:textColor="#fff"
+                                android:textAppearance="@style/TextAppearance.Helvetica.Italic"
+                                android:text="updated 0 seconds ago"/>
+
+                            <TextView
+                                android:id="@+id/activity_live_usage_max_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:textColor="#fff"
+                                android:textAppearance="@style/TextAppearance.Helvetica.Light"
+                                android:text="4000"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="#1a2d3b">
+
+                            <ImageView
+                                android:id="@+id/fragment_live_chart_previous"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/icon_forward_white"
+                                android:padding="10dp" />
+
+                            <TextView
+                                android:id="@+id/fragment_live_chart_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textSize="20sp"
+                                android:textColor="#fff"
+                                android:textAppearance="@style/TextAppearance.Helvetica"
+                                android:textStyle="normal"
+                                android:text="TITLE"/>
+
+                            <ImageView
+                                android:id="@+id/fragment_live_chart_next"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/icon_back_white"
+                                android:padding="10dp" />
+
+                        </FrameLayout>
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/activity_live_usage_viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="20dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_live_usage_menu"
+        android:name="nl.wittig.net2grid.liveUsage.fragments.LiveUsageMenu"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_menu_live_usage" />
+</android.support.v4.widget.DrawerLayout>

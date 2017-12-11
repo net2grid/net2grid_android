@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">NET2GRID</string>
+
+    <string name="power_usage_chart_title">current <b>Power</b> usage</string>
+
+    <string name="chart_power_hour_chart"><b>Power</b> last hour</string>
+    <string name="chart_power_day_chart"><b>Power</b> 24h</string>
+    <string name="chart_gas_year_chart"><b>Gas</b> 52 weeks</string>
+    <string name="chart_gas_day_chart"><b>Gas</b> 48h</string>
+    <string name="chart_gas_month_chart"><b>Gas</b> 30 days</string>
+
+    <string name="error_message_no_meter_connected"><i>no meter connected</i></string>
+
+    <string name="chart_energy_day_chart"><b>Energy</b> 48h</string>
+    <string name="chart_energy_month_chart"><b>Energy</b> 30 days</string>
+    <string name="chart_energy_year_chart"><b>Energy</b> 52 weeks</string>
+
+    <string name="wrong_network_title">Your device is currently on the network <b>%1$s</b> but your SmartBridge isn’t.</string>
+    <string name="no_network_title">Your device is currently not on a WiFi network.</string>
+    <string name="wrong_network_subtitle">Go to settings > WiFi to switch to the same network as your SmartBridge</string>
+
+    <string name="no_data_searching">No data available yet, \nwe need some time to collect the data</string>
+
+    <string name="chart_loading_data">Loading data&#8230;</string>
+
+    <string name="registration_error_102_msg">This email address or receiver unit is already in use. Please check again or contact customer service right away! To assist you properly, please share the following with customer service: (error</string>
+    <string name="registration_error_12X_msg">An unrecoverable error occurred. Please try again or contact customer service! To assist you properly, please share the following with customer service: (error</string>
+    <string name="standard_api_error_message">Something went wrong</string>
+
+
+    <string name="connecting_with_smartbridge">Connecting to the SmartBridge</string>
+    <string name="connect_with_smartbridge">Connect with SmartBridge</string>
+    <string name="dashboard_updated_label">next update in %1$d seconds</string>
+
+    <string name="unknown_error">Unknown error!</string>
+
+    <string name="no_internet">No internet connection.</string>
+    <string name="authorization_fail">Authorisation fail.</string>
+    <string name="internal_server_error">Internal server error.</string>
+    <string name="unknown_server_error">Unknown server error.</string>
+
+    <string name="meda_open_wifi_settings_step_first">1. Open WiFi Settings</string>
+    <string name="meda_open_wifi_settings_step_second">2. On the back of the SmartBridge you’ll find information needed to connect</string>
+    <string name="meda_open_wifi_settings_step_third">3. The SSID is <b>sbwf-</b> plus the last four characters of your MAC address\n <i>- This is always uppercase -</i></string>
+    <string name="meda_open_wifi_settings_step_fourth">4. The password is sbwf- plus the SmartBridge shortcode\n <i>- This is case-sensitive -</i></string>
+    <string name="meda_open_wifi_settings_step_fifth">5. Return to this app.</string>
+
+    <string name="meda_connect_station_to_wifi_first">Select your home network</string>
+    <string name="onboarding_enter_password">Enter your WiFi password</string>
+    <string name="connected">Connected!</string>
+    <string name="connecting">Connecting</string>
+    <string name="goto_wifi_settings">Go to WiFi settings</string>
+    <string name="verifying_connection">We are verifying your connection</string>
+    <string name="connect_pop_up">Connect</string>
+    <string name="cancel_pop_up">Cancel</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_on_boarding">On Boarding</string>
+    <string name="title_activity_live_usage">Live Usage</string>
+    <string name="title_activity_wrong_network_connected">WrongNetworkConnectedActivity</string>
+    <string name="title_activity_discover_network">Connecting to the SmartBridge&#8230;</string>
+    <string name="title_intro_connect_network">Connect to the SmartBridge</string>
+</resources>

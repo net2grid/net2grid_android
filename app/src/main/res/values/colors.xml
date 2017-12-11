@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#213b4c</color>
+    <color name="colorPrimaryDark">#1a2d3b</color>
+    <color name="colorAccent">#529da8</color>
+
+    <color name="grey_dark">#666666</color>
+    <color name="grey">#999999</color>
+    <color name="grey_slight">#EEEEEE</color>
+
+    <color name="elec_chart_color">#37d1bb</color>
+    <color name="gas_chart_color">#F0636E</color>
+
+    <color name="message_counter_background">#e80507</color>
+    <color name="red">@color/message_counter_background</color>
+    <color name="white">#ffffff</color>
+
+    <array name="dot_colors">
+        <item>#637581</item>
+    </array>
+</resources>

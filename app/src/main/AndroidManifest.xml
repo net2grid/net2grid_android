@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.wittig.net2grid">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".YnniApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".onboarding.OnBoardingActivity"
+            android:label="@string/title_activity_on_boarding"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".liveUsage.LiveUsageActivity"
+            android:label="@string/title_activity_live_usage"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".liveUsage.WrongNetworkConnectedActivity"
+            android:label="@string/title_activity_wrong_network_connected"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".zeroconf.service.ZeroConfService" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="68f6d3e788ea876d11dcec5a8ac49e45c7eec2f1" />
+
+        <activity
+            android:name=".liveUsage.DiscoverNetworkActivity"
+            android:label="@string/title_activity_discover_network"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

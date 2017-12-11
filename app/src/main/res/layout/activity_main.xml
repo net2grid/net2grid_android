@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#213b4c"
+    android:fitsSystemWindows="true"
+    tools:context="nl.wittig.net2grid.MainActivity">
+
+    <com.bhargavms.dotloader.DotLoader
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        app:color_array="@array/dot_colors"
+        app:dot_radius="15dp"
+        app:number_of_dots="3"/>
+
+</android.support.design.widget.CoordinatorLayout>
