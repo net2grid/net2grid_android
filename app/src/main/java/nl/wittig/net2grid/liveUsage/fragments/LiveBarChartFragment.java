@@ -7,6 +7,7 @@ import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -56,11 +57,8 @@ public abstract class LiveBarChartFragment extends LiveChartFragment {
         setupChart();
     }
 
-    @Override
-    protected void updateData()
+    protected void updateData(int color)
     {
-        super.updateData();
-
         List<BarEntry> chartData = getChartData();
 
         if (chartData.size() > 0) {
@@ -69,7 +67,7 @@ public abstract class LiveBarChartFragment extends LiveChartFragment {
             noDataFrame.setVisibility(View.GONE);
 
             BarDataSet barDataSet = new BarDataSet(chartData, "powerEntries");
-            barDataSet.setColor(ResourcesCompat.getColor(getResources(), getChartColorResource(), null));
+            barDataSet.setColor(ResourcesCompat.getColor(getResources(), color, null));
             barDataSet.setDrawValues(false);
 
             BarData barData = new BarData(barDataSet);

@@ -18,7 +18,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -87,8 +86,6 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
     @BindView(R.id.activity_live_usage_interval) TextView intervalText;
     @BindView(R.id.activity_live_usage_max_value) TextView maxValue;
 
-    @BindView(R.id.activity_live_usage_chart_placeholder) LinearLayout chartPlaceholder;
-
     @BindView(R.id.activity_live_usage_drawer) DrawerLayout drawerLayout;
 
     @BindView(R.id.fragment_live_chart_title) TextView title;
@@ -110,7 +107,7 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
     private LiveUsageMenu menuFragment;
 
     private int currentPagePosition;
-    private int secondsAgo = 10;
+    private int secondsAgo;
     public boolean isConnectedToSmartBridge;
 
     private List<LiveChartFragment> configurationFragments;
@@ -294,9 +291,6 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
         powerChart.setScaleEnabled(false);
         powerChart.setTouchEnabled(false);
 
-        powerChart.setNoDataText(getString(R.string.chart_loading_data));
-        powerChart.setNoDataTextColor(Color.WHITE);
-
         Description desc = new Description();
         desc.setText("");
         powerChart.setDescription(desc);
@@ -344,7 +338,7 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
                     updateLiveData(now, min, max);
                     updateUsage(powerResponse);
 
-                    secondsAgo = 10;
+                    secondsAgo = 0;
                 }
             }
 
@@ -358,6 +352,7 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
 
                     if (nowFailCount >= MAX_NOW_FAIL_COUNT) {
 
+                        // todo service discovery starten
                         Log.i(TAG, "now request failed max times, starting service discovery");
                         startActivity(new Intent(LiveUsageActivity.this, DiscoverNetworkActivity.class));
 
@@ -385,6 +380,9 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
             activeData.add(new BarEntry(i, (float)translateLiveValue(step)));
         }
 
+        BarDataSet activeDataSet = new BarDataSet(activeData, "active");
+        activeDataSet.setColor(Color.parseColor("#37d1bb"));
+        activeDataSet.setDrawValues(false);
 
         // Inactive
         List<BarEntry> inActiveData = new ArrayList<>();
@@ -396,31 +394,17 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
             inActiveData.add(new BarEntry(i, (float)translateLiveValue(step)));
         }
 
-        if (activeData.size() > 0 || inActiveData.size() > 0) {
+        BarDataSet inActiveDataSet = new BarDataSet(inActiveData, "inactive");
+        inActiveDataSet.setColor(Color.parseColor("#1a2d3b"));
+        inActiveDataSet.setDrawValues(false);
 
-            chartPlaceholder.setVisibility(View.GONE);
-            powerChart.setVisibility(View.VISIBLE);
+        BarData barData = new BarData();
+        barData.addDataSet(activeDataSet);
+        barData.addDataSet(inActiveDataSet);
+        barData.setBarWidth(0.5f);
 
-            BarDataSet activeDataSet = new BarDataSet(activeData, "active");
-            activeDataSet.setColor(Color.parseColor("#37d1bb"));
-            activeDataSet.setDrawValues(false);
-
-            BarDataSet inActiveDataSet = new BarDataSet(inActiveData, "inactive");
-            inActiveDataSet.setColor(Color.parseColor("#1a2d3b"));
-            inActiveDataSet.setDrawValues(false);
-
-            BarData barData = new BarData();
-            barData.addDataSet(activeDataSet);
-            barData.addDataSet(inActiveDataSet);
-            barData.setBarWidth(0.5f);
-
-            powerChart.setData(barData);
-            powerChart.invalidate();
-        } else {
-
-            chartPlaceholder.setVisibility(View.VISIBLE);
-            powerChart.setVisibility(View.GONE);
-        }
+        powerChart.setData(barData);
+        powerChart.invalidate();
     }
 
     private double translateLiveValue(int step) {
@@ -457,15 +441,14 @@ public class LiveUsageActivity extends AppCompatActivity implements LiveChartFra
         public void run() {
 
             updateIntervalView();
-            secondsAgo--;
-
+            secondsAgo++;
             handler.postDelayed(updateInterval, INTERVAL_UPDATE_VIEW);
         }
     };
 
     private void updateIntervalView() {
 
-        intervalText.setText(getString(R.string.dashboard_updated_label, Math.max(secondsAgo, 0)));
+        intervalText.setText(getString(R.string.dashboard_updated_label, secondsAgo));
     }
 
     private Runnable fetchRunnable = new Runnable() {

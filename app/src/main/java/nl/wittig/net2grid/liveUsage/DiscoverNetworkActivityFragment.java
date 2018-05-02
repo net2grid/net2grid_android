@@ -66,7 +66,7 @@ public class DiscoverNetworkActivityFragment extends Fragment {
 
                 if (failCount >= MAX_RETRY_FAIL) {
 
-//                    AlertHelper.errorOccured(getActivity().getApplicationContext(), "Couldn't connect to SmartBridge").show();
+                    AlertHelper.errorOccured(getActivity().getApplicationContext(), "Couldn't connect to SmartBridge").show();
 
                     failCount = 0;
                     getActivity().finish();

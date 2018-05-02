@@ -104,7 +104,7 @@ public class SelectNetworkFragment extends OnBoardingFragment {
 
         AlertDialog.Builder passwordDialog = new AlertDialog.Builder(getActivity());
         passwordDialog.setTitle(network.getName());
-        passwordDialog.setMessage(getString(R.string.onboarding_enter_password));
+        passwordDialog.setMessage("Please enter your password");
 
         FrameLayout container = new FrameLayout(getContext());
 
@@ -143,7 +143,7 @@ public class SelectNetworkFragment extends OnBoardingFragment {
         container.addView(passwordInput);
         passwordDialog.setView(container);
 
-        passwordDialog.setPositiveButton(getString(R.string.connect_pop_up), new DialogInterface.OnClickListener() {
+        passwordDialog.setPositiveButton("Connect", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -153,7 +153,7 @@ public class SelectNetworkFragment extends OnBoardingFragment {
             }
         });
 
-        passwordDialog.setNegativeButton(getString(R.string.cancel_pop_up), new DialogInterface.OnClickListener() {
+        passwordDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 

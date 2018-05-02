@@ -120,7 +120,7 @@ public class JoiningNetworkFragment extends LoadingNetworkFragment {
     @Override
     public void onFragmentVisible() {
 
-        verifyingtext.setText(getString(R.string.connecting));
+        verifyingtext.setText("Connecting");
 
         if(!joiningStarted) {
 

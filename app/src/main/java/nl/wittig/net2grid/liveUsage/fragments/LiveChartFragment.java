@@ -2,21 +2,14 @@ package nl.wittig.net2grid.liveUsage.fragments;
 
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-
-import java.util.concurrent.TimeUnit;
 
 public abstract class LiveChartFragment extends Fragment
 {
-    private static final String TAG = LiveChartFragment.class.getSimpleName();
     protected ReadyListener readyListener;
-
-    private long DEFAULT_REFRESH_INTERVAL = TimeUnit.SECONDS.toMillis(10);
 
     protected boolean fragmentVisible;
     protected boolean fragmentStarted;
     private boolean isCreated = false;
-    protected boolean hadFirstData = false;
 
     private Handler handler = new Handler();
 
@@ -39,21 +32,9 @@ public abstract class LiveChartFragment extends Fragment
     protected abstract void fetchData();
     protected abstract void setupChart();
 
-    protected abstract long getRefreshInterval();
-    protected abstract int getChartColorResource();
-
-    protected void updateData() {
-
-        hadFirstData = true;
-    }
-
     protected void onFragmentVisible() {
 
-        long randomDelay = Math.round(Math.random() * 2000);
-
-        Log.i(TAG, "Fetching in " + randomDelay);
-
-        handler.postDelayed(fetchRunnable, randomDelay);
+        fetchData();
 
         readyListener.onFragmentReady(this);
 
@@ -98,10 +79,10 @@ public abstract class LiveChartFragment extends Fragment
         this.readyListener = listener;
     }
 
-    protected void scheduleFetchIfNeeded() {
+    protected void scheduleFetchIfNeeded(long timeOut) {
 
         if (fragmentVisible) {
-            handler.postDelayed(fetchRunnable, hadFirstData ? getRefreshInterval() : DEFAULT_REFRESH_INTERVAL);
+            handler.postDelayed(fetchRunnable, timeOut);
         }
     }
 

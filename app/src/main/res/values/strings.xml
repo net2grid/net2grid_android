@@ -1,43 +1,494 @@
 <resources>
     <string name="app_name">NET2GRID</string>
+    <string name="title_activity_connect">Connect to a WiFi network</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_select_network">Select a network</string>
 
+    <string name="title_activity_meda">MedaActivity</string>
+
+    <string name="name">default</string>
     <string name="power_usage_chart_title">current <b>Power</b> usage</string>
+    <string name="energy_usage_chart_title">current <b>Energy</b> usage</string>
 
-    <string name="chart_power_hour_chart"><b>Power</b> last hour</string>
-    <string name="chart_power_day_chart"><b>Power</b> 24h</string>
-    <string name="chart_gas_year_chart"><b>Gas</b> 52 weeks</string>
-    <string name="chart_gas_day_chart"><b>Gas</b> 48h</string>
-    <string name="chart_gas_month_chart"><b>Gas</b> 30 days</string>
+    <string name="chart_power_hour_chart"><b>Power</b> usage - current</string>
+    <string name="chart_power_day_chart"><b>Power</b> usage - day</string>
+    <string name="chart_gas_year_chart"><b>Gas</b> usage - year</string>
+    <string name="chart_gas_day_chart"><b>Gas</b> usage - day</string>
+    <string name="chart_gas_month_chart"><b>Gas</b> usage - month</string>
 
     <string name="error_message_no_meter_connected"><i>no meter connected</i></string>
 
-    <string name="chart_energy_day_chart"><b>Energy</b> 48h</string>
-    <string name="chart_energy_month_chart"><b>Energy</b> 30 days</string>
-    <string name="chart_energy_year_chart"><b>Energy</b> 52 weeks</string>
+    <string name="chart_energy_day_chart"><b>Energy</b> usage - day</string>
+    <string name="chart_energy_month_chart"><b>Energy</b> usage - month</string>
+    <string name="chart_energy_year_chart"><b>Energy</b> usage - year</string>
 
     <string name="wrong_network_title">Your device is currently on the network <b>%1$s</b> but your SmartBridge isn’t.</string>
     <string name="no_network_title">Your device is currently not on a WiFi network.</string>
     <string name="wrong_network_subtitle">Go to settings > WiFi to switch to the same network as your SmartBridge</string>
 
-    <string name="no_data_searching">No data available yet, \nwe need some time to collect the data</string>
-
-    <string name="chart_loading_data">Loading data&#8230;</string>
-
-    <string name="registration_error_102_msg">This email address or receiver unit is already in use. Please check again or contact customer service right away! To assist you properly, please share the following with customer service: (error</string>
-    <string name="registration_error_12X_msg">An unrecoverable error occurred. Please try again or contact customer service! To assist you properly, please share the following with customer service: (error</string>
-    <string name="standard_api_error_message">Something went wrong</string>
-
+    <string name="chart_loading_data">Loading data...</string>
 
     <string name="connecting_with_smartbridge">Connecting to the SmartBridge</string>
-    <string name="connect_with_smartbridge">Connect with SmartBridge</string>
-    <string name="dashboard_updated_label">next update in %1$d seconds</string>
 
-    <string name="unknown_error">Unknown error!</string>
-
+    <string name="phase_name" translatable="false">R3.1</string>
+    <string name="samba_phase_name" translatable="false">R6.0</string>
+    <string name="welcome_toolbar">Ynni</string>
+    <string name="welcome_title">Energy with Ynni</string>
+    <string name="welcome_desc">Ever thought about how much energy your home is using right now\? Or how much it costs to wash clothes or dishes, cook dinner, refrigerate food or turn up the heat\? Ynni lets you understand energy and makes it fun. Open Ynni and discover a whole new world full of energy.</string>
+    <string name="navigation_strap_account_exist">I already have an account</string>
+    <string name="navigation_strap_new">New</string>
+    <string name="register_data_title">Activate Ynni account</string>
+    <string name="register_data_desc">It only takes a couple of minutes and then you can start enjoying the benefits of Ynni. Just type in your E-mail address.</string>
+    <string name="register_data_email_hint">E-mail</string>
+    <string name="register_data_serial_hint">MAC address</string>
+    <string name="welcome_checkbox_confirm_normal_static_part">Yes, I agree to the</string>
+    <string name="welcome_checkbox_confirm_link_static_part">Terms of use</string>
+    <string name="welcome_checkbox_confirm_link_adress">http://energy-i.com/nutzungsbedingungen</string>
+    <string name="passcode_screen_login_title">Use your pin code to log in</string>
+    <string name="passcode_screen_input1">Choose a 5-digit pin to log in easily</string>
+    <string name="passcode_screen_input2">Re-enter your 5-digit pin to confirm</string>
+    <string name="passcode_error_not_whole_filled">Please enter the full 5 digit code</string>
+    <string name="passcode_error_not_match">Incorrect pincode</string>
+    <string name="next_step">Next</string>
+    <string name="ready">Next</string>
+    <string name="dashboard_title">Ynni</string>
+    <string name="energy">Energy</string>
+    <string name="profile">Profile</string>
+    <string name="inbox">Inbox</string>
+    <string name="badges">Awards</string>
+    <string name="challenges">Competitions</string>
+    <string name="settings">Settings</string>
+    <string name="go_to_details_energy">Electricity</string>
+    <string name="go_to_details_gas">Gas</string>
+    <string name="circle_chart_second">Left</string>
+    <string name="circle_chart_third">from</string>
+    <string name="circle_chart_third_values">%1$d.- %2$s</string>
+    <string name="circle_chart_empty_first">Set your</string>
+    <string name="gas_circle_chart_empty_second">Gas budget</string>
+    <string name="energy_circle_chart_empty_second">Energy budget</string>
+    <string name="circle_chart_empty_third"></string>
+    <string name="circle_chart_empty_meter_first">No data</string>
+    <string name="circle_chart_empty_meter_second">is being received</string>
+    <string name="circle_chart_empty_meter_third">from the meter</string>
+    <string name="circle_chart_empty_profile_first">Please fill in</string>
+    <string name="circle_chart_empty_profile_second">your profile</string>
+    <string name="circle_chart_empty_profile_third"></string>
+    <string name="latest_update">Latest update</string>
+    <string name="latest_bundle_refresh">Days until the new month</string>
+    <string name="no_latest_update">No data available yet</string>
+    <string name="no_new_update">Not known yet</string>
+    <string name="no_chalange_text">No challenges</string>
+    <string name="tarif_text">Monthly energy budget settings</string>
+    <string name="energy_data_title">Set your monthly electricity budget</string>
+    <string name="energy_data_text">Ynni likes to keep precise track of your electricity usage, so you have more insights. Fill out your monthly payment and your annual energy usage. Ynni will calculate your budget.</string>
+    <string name="energy_data_installment_hint">Monthly payment</string>
+    <string name="energy_data_electricity_hint">Annual electricity usage</string>
+    <string name="energy_data_gas_hint">Annual gas usage</string>
+    <string name="energy_data_toolbar_title">Dashboard</string>
+    <string name="energy_data_save_text">Save</string>
+    <string name="consumption_details_title">Dashboard</string>
+    <string name="history">Previous usage</string>
+    <string name="compare">Compare usage</string>
+    <string name="energy_consumption_title">Energy budget</string>
+    <string name="consumption_details_gas">Gas budget</string>
+    <string name="energy_consumption_history_title">Discover your previous electricity usage</string>
+    <string name="gas_consumption_history_title">Discover your previous gas usage</string>
+    <string name="compare_energy_consumption_history_title">Electricity usage comparison</string>
+    <string name="compare_gas_consumption_history_title">Gas usage comparison</string>
+    <string name="energy_toolbar_text">Electricity usage</string>
+    <string name="gas_toolbar_text">Gas usage</string>
+    <string name="compare_description_energy">Ynni compares your electricity usage with other people in the test group. Are you an energy monster or an energy saver\?</string>
+    <string name="compare_description_gas">Ynni compares your gas usage with other people in the test group. Are you an energy monster or an energy saver\?</string>
+    <string name="chart_popup_cost">Cost:</string>
+    <string name="chart_popup_usage">Usage:</string>
+    <string name="chart_popup_celcius">°C outdoors:</string>
+    <string name="chart_popup_average">Average usage:</string>
+    <string name="energy_serie_title">Usage</string>
+    <string name="gas_chart_bar_legend">Gas</string>
+    <string name="gas_chart_line_legend">Temperature</string>
+    <string name="compare_serie_title">Average test group usage</string>
+    <string name="gas_history_line_legend_title">Line DataSet</string>
+    <string name="gas_history_bar_legend_title">Bar DataSet</string>
+    <string name="history_chart_subtitle_hours">This is your usage for hours on %1$s</string>
+    <string name="history_chart_subtitle_days">This is your usage from %1$s to %2$s</string>
+    <string name="history_chart_subtitle_weeks">This is your usage from %1$s to %2$s</string>
+    <string name="history_chart_subtitle_months">This is your usage from %1$s to %2$s</string>
+    <string name="missing_data">Data is missing!</string>
+    <string name="history_chart_hours">Hours</string>
+    <string name="history_chart_days">Days</string>
+    <string name="history_chart_weeks">Weeks</string>
+    <string name="history_chart_months">Months</string>
+    <string name="profile_title">Update the information you have shared with Ynni.</string>
+    <string name="profile_email">E-mail address</string>
+    <string name="profile_serial">MAC number</string>
+    <string name="profile_installment">@string/energy_data_installment_hint</string>
+    <string name="profile_annual_flow">@string/energy_data_electricity_hint</string>
+    <string name="profile_annual_gas">N/A</string>
+    <string name="profile_rate_flow">Electricity rate</string>
+    <string name="profile_rate_gas">Gas rate</string>
+    <string name="profile_updated_message">Profile has been updated</string>
+    <string name="profile_field_wrong_format">Wrong format, please enter a number</string>
+    <string name="annual_savings_text">Annual savings:</string>
+    <string name="badges_title">Take a challenge and earn awards\nGood luck!</string>
+    <string name="accept_challenge_button_text">I accept the challenge</string>
+    <string name="close_challenge_button_text">Close</string>
+    <string name="mark_as_unread">Mark as unread</string>
+    <string name="mark_as_read">Mark as read</string>
+    <string name="delete">Delete</string>
+    <string name="setting_push_messages">Push messages</string>
+    <string name="setting_push_messages_details">Ynni occasionally sends you messages and alerts. If you don’t want to receive them, turn them off here.</string>
+    <string name="version_details">Current Ynni app version:</string>
     <string name="no_internet">No internet connection.</string>
     <string name="authorization_fail">Authorisation fail.</string>
     <string name="internal_server_error">Internal server error.</string>
     <string name="unknown_server_error">Unknown server error.</string>
+    <string name="error_meda_connection_fail">MeDa station connection failed (error 110)</string>
+    <string name="no_internet_title">Connection Status</string>
+    <string name="no_internet_message">You have no internet connection.</string>
+    <string name="no_internet_accept">OK</string>
+    <string name="error_occurred">Error occurred, please try again later.</string>
+    <string name="title_loading_dialog">Please wait…</string>
+    <string name="days_string">days</string>
+    <string name="accept_chalange">Accept challenge</string>
+    <string name="temp_symbol">°C</string>
+    <string name="message_m001_title">Help us to help you:</string>
+    <string name="message_m001_body">Just input into your Ynni App the amount you pay your energy supplier each month. The App can then give you even better insight into your energy use.</string>
+    <string name="message_m001r_title">Help us to help you:</string>
+    <string name="message_m001r_body">Just input into your Ynni App the amount of direct debit you pay each month. The App can then give you even better insight into your energy use.</string>
+    <string name="message_m006_title">You’ve completed your profile!</string>
+    <string name="message_m006_body">Great, you’ve filled out all your profile information. This gives us the opportunity to advise you even more precisely. That’s why you’ve earned a badge again! Well done!</string>
+    <string name="message_m006_1_title">Tell us more about the occupants</string>
+    <string name="message_m006_1_body">To advise you even better, we would like to know a bit more about the occupants in your house. You can add this additional information in your ‘profile’.</string>
+    <string name="message_m006_2_title">Tell us more about your property</string>
+    <string name="message_m006_2_body">To advise you even better, we would like to know a bit more about your property. Is it a rental house or are you a home owner\? You can add this additional information in your ‘profile’.</string>
+    <string name="message_m006_3_title">Tell us more about your appliances</string>
+    <string name="message_m006_3_body">To advise you even better, we would like to know a bit more about the appliances you use. Do you own a washing machine or dryer\? You can add this information in your ‘profile’.</string>
+    <string name="message_m006_4_title">Tell us more about the way you heat your house and water</string>
+    <string name="message_m006_4_body">To advise you even better, we would like to know a bit more about the way you heat your house and water. You can add this additional information in your ‘profile’.</string>
+    <string name="message_m008_title">Have you already checked your usage\?</string>
+    <string name="message_m008_body">Curious where you use all that electricity for\? Or on what days your usages is low or quite high\? You can check this in the Ynni app. Please, take a look.</string>
+    <string name="message_m010_title">How much energy do you use a year\?</string>
+    <string name="message_m010_body">Ynni can help you work out your electricity budget. So you then can see if you are on target with how much you spend on energy. Ynni needs a bit of information to do this as the App isn’t linked to innogy\'s billing system. So dig out your bill and see what you pay for each kWh of electricity, plus how much energy you use a year. If you are an online customer, you can also check this information in your account. Once you’ve input the information into the App, it can calculate your energy budget and you’ll have your second Ynni Reward Badge. Easy.</string>
+    <string name="message_m010r_title">How much energy do you use a year\?</string>
+    <string name="message_m010r_body">Ynni App can help you work out your energy budget so you can see if you’re spending more or less than your target. So just input what you pay for each kWh of electricity, plus how much energy you use a year – and you’ll have earned your second Ynni badge.</string>
+    <string name="message_m011_title">Take a look in the mirror</string>
+    <string name="message_m011_body">Are you using a lot of energy compared to the rest of your peer group or is it the opposite\? Compare your energy usage and then you’ll find out. It will give you a bit more insight on your usage. Good luck!</string>
+    <string name="message_m011r_title">Took a look in the mirror yet\?</string>
+    <string name="message_m011r_body">Have you already compared your energy usage with the rest of your peer group\? Take a look, you will be amazed!</string>
+    <string name="message_m016_title">How to get energized about energy saving\?</string>
+    <string name="message_m016_body">OK we admit it. Energy saving may not be the sexiest subject. But just think what you can do with all the money you save. So here’s Ynni’s five smart tips to save energy and save money:</string>
+    <string name="message_m016r_title">How to get energized about energy saving\?</string>
+    <string name="message_m016r_body">OK we admit it. Energy saving may not be the sexiest subject. But just think what you can do with all the money you save. So here’s Ynni’s five smart tips to save energy and save money:\n</string>
+    <string name="message_m017_title">Welcome to Ynni</string>
+    <string name="message_m017_body">Thanks for entering your e-mail address and pin-code. Ynni can tailor its service just for you. Great, now let’s get started.\n</string>
+    <string name="message_m018_title">Ynni has a new free upgrade.</string>
+    <string name="message_m018_body">Now it has even better features. Curious\? Of course you are. Go on, download the latest version now and all will be revealed.</string>
+    <string name="message_m019_title">Unfortunately, the connection between your smart-meter and the receiver unit has been lost.</string>
+    <string name="message_m019_body">Possibly the data connection is interrupted. Don\'t worry, your smart-meter won\'t be affected. We will help you to reconnect, just call 0800-8888863 or send an e-mail to pilotstudie@innogy.com</string>
+    <string name="message_m021a_title">Ynni is temporarily unavailable</string>
+    <string name="message_m021a_body">Ynni service temporarily unavailable due to maintenance or a problem with the system. Try again later.</string>
+    <string name="message_m024_title" formatted="false">10% left of electricity budget</string>
+    <string name="message_m024_body">Don’t worry. Your electricity won’t run out. Ynni has calculated that the electricity budget that you set yourself is running out. So it’s a good time to take another look at your energy consumption. How can you make smarter use of your energy\?</string>
+    <string name="message_m025_title" formatted="false">10% left of gas budget</string>
+    <string name="message_m025_body">Don’t worry. Your gas won’t run out. Ynni has calculated that the gas budget that you set yourself is running out. So it’s a good time to take another look at your energy consumption. How can you make smarter use of your energy\?</string>
+    <string name="message_m026_title">Your energy budget has run out</string>
+    <string name="message_m026_body">Don’t worry. Your electricity won’t run out. Ynni has calculated that your electricity budget that you set yourself has run out. If it happens more often, it would be wise to increase your direct debit a bit, so you’ve no extra payments to make at the end of the year.</string>
+    <string name="message_m027_title">Your energy budget has run out</string>
+    <string name="message_m027_body">Don’t worry. Your gas won’t run out. Ynni has calculated that your gas budget that you set yourself has run out. If it happens more often, it would be wise to increase your direct debit a bit, so you’ve no extra payments to make at the end of the year.</string>
+    <string name="message_m038_title">Data retrieved</string>
+    <string name="message_m038_body">The connection with your smart meter has been restored. Ynni will make sure everything is updated.</string>
+    <string name="message_m100_title">Data link was interrupted temporarily</string>
+    <string name="message_m100_body">The data link with your household was interrupted temporarily. Data link has been restored. In case of prolonged interruption the energy consumption will be displayed shifted in time in the charts.</string>
+    <string name="challenge_c017_title">Welcome to Ynni</string>
+    <string name="challenge_c017_body">Thanks for entering your e-mail address. Ynni can tailor its service just for you. Great, now let’s get started.</string>
+    <string name="challenge_c001_title">How does Ynni help you budget\?</string>
+    <string name="challenge_c001_body">Thanks for providing your direct debit amount. You’ve earned a badge!\n\nEach month you pay your direct debit amount. This amount is fixed. To get more of an idea of what you can use, Ynni works with a monthly electricity budget. Therefore we worked out your direct debit by evening out seasonal and yearly fluctuations. Now you have a clear estimate of what you can use on a monthly basis.</string>
+    <string name="challenge_c006_title">You’ve completed your profile!</string>
+    <string name="challenge_c006_body">Great, you’ve filled out all your profile information. This gives us the opportunity to advise you even more precisely. That’s why you’ve earned a badge again! Well done!</string>
+    <string name="challenge_c010_title">Thank you for your help!</string>
+    <string name="challenge_c010_body">Thanks for providing what you spend on electricity. Now you’ll get a better insight of your energy usage. You’ve just earned a Ynni Reward Badge.</string>
+    <string name="challenge_c011_title">*trumpet sounds*</string>
+    <string name="challenge_c011_body">You have earned a badge! Alright, you know where you stand. Are you using less energy than the rest\? Keep it going! Are you a real energy monster…then maybe you can take a look around and see where you can save some energy.</string>
+    <string name="challenge_c016_title">How to get energized about energy saving\?</string>
+    <string name="challenge_c016_body">Thanks for checking out Ynni’s saving tips. Which one are you going to take on first\? Congratulations: you’ve just earned an Ynni Reward Badge.</string>
+    <string name="tip_t001_title">Declutter</string>
+    <string name="tip_t001_body">How do you spend your evenings\? Watching TV\? On your computer\? Or both at the same time\? Plan one night a week to do something that doesn’t need electricity. Like sorting out your wardrobe or shed or other jobs you’ve put off. You’ll save energy, feel good – and you may even find that old T-shirt thas has been missed for ages.</string>
+    <string name="tip_t002_title">Cosy on the couch</string>
+    <string name="tip_t002_body">Make movie nights extra cosy. Light some candles, close the curtains and cuddle up with everyone under a blanket. Then drop your thermostat down by one degree. It’ll save you an extra pounds per month. Plus, you probably won’t notice dropping the temperature by one degree during the daytime.</string>
+    <string name="tip_t003_title">Optimise your boiler</string>
+    <string name="tip_t003_body">Did you know you can also control your boiler temperature\? Grab your boiler manual and see what the optimum temperature setting is. Too technical for you\? Just call our installers: +49 (0)231 438-26 98. They can help you optimize your boiler so you’ll maximize the money you save too.</string>
+    <string name="tip_t004_title">Small loads could cost you loads</string>
+    <string name="tip_t004_body">Some washing machines have a small load or half-load programme. Yes, they may use less energy and water. But washing two half loads uses up to twice the water and energy of one full load. So fill up your washing machine to the max.</string>
+    <string name="tip_t005_title">Stir it up</string>
+    <string name="tip_t005_body">Do you cook your meat, veg, rice and spuds in different pots on your stove\? Try a regular stir-fry instead and you’ll save a few euros per year.</string>
+    <string name="segmented_budget_title">My budget</string>
+    <string name="segmented_actual_usage">Current usage</string>
+    <string name="speedometer_min">Low</string>
+    <string name="speedometer_max">High</string>
+    <string name="label_title_electricity">at this moment \n%d Watt</string>
+    <string name="next_update_in">Next update in</string>
+    <string name="power_live_usage_info">View your current power</string>
+    <string name="power_live_usage_subinfo">Consumption 5 minutes</string>
+    <string name="power_live_usage_title">overview</string>
+    <string name="power_live_usage_unit">Watt</string>
+    <string name="power_live_usage_actual_consuption">Current consumption</string>
+    <string name="power_live_usage_highest_label">Highest (last 12 hours) %d Watt</string>
+    <string name="power_live_usage_average_label">Average (last 12 hours) %d Watt</string>
+    <string name="power_live_usage_lowest_label">Lowest (last 12 hours) %d Watt</string>
+    <string name="label_title_gas">last hour \n%.2f</string>
+    <string name="next_update_subtitle">%d seconds</string>
+    <string name="next_update_one_second_exception">%d second</string>
+    <string name="power_live_usage_popup_consumption">Consumption: %d Watt</string>
+    <string name="label_title_unknown_electricity">at this moment \nUnknown</string>
+    <string name="label_title_unknown_gas">last hour \nUnknown</string>
+    <string name="gateway_offline_message">Ynni cannot connect to your smart-meter. Is your receiver unit connected properly\?</string>
+    <string name="message_m034a_title">Well done! You stayed within your electricity budget!</string>
+    <string name="message_m034a_body">Well done! You stayed within your electricity budget! Congratulations! Did you pay extra attention to your electricity usage\? Or are you always this precise\?</string>
+    <string name="message_m034b_title">Well done! You stayed within your gas budget!</string>
+    <string name="message_m034b_body">Well done! You stayed within your gas budget! Congratulations! Did you pay extra attention to gas usage\? Or are you always this precise\?</string>
+    <string name="message_m100_1_title">The connection with your smart meter has been restored</string>
+    <string name="message_m100_1_body">We lost the connection%s but the connection with your smart meter has now been restored</string>
+    <string name="message_get_started_link">Get started</string>
+    <string name="go_to_details_energy_budget">Electricity budget</string>
+    <string name="go_to_details_gas_budget">Gas budget</string>
+    <string name="profile_list_account">Account</string>
+    <string name="profile_list_usage">Usage</string>
+    <string name="profile_list_properties">Properties</string>
+    <string name="profile_list_occupants">Occupants</string>
+    <string name="profile_list_heating">Heating</string>
+    <string name="profile_list_appliances">Appliances</string>
+    <string name="profile_toolbar_title">profile</string>
+    <string name="profile_section_subtitle">The information which you have given to Ynni.</string>
+    <string name="profile_appliances_fridge">Fridge</string>
+    <string name="profile_appliances_freezer">Freezer</string>
+    <string name="profile_appliances_combiFridge">Combi fridge / freezer</string>
+    <string name="profile_appliances_oven">Oven</string>
+    <string name="profile_appliances_grill">Grill</string>
+    <string name="profile_appliances_hob">Hob</string>
+    <string name="profile_appliances_microwave">Microwave</string>
+    <string name="profile_appliances_kettle">Kettle</string>
+    <string name="profile_appliances_toaster">Toaster</string>
+    <string name="profile_appliances_dishwasher">Dishwasher</string>
+    <string name="profile_appliances_washing_machine">Washing machine</string>
+    <string name="profille_appliances_tumble_drier">Tumble drier</string>
+    <string name="profile_appliances_iron">Iron</string>
+    <string name="profile_appliances_tv">TV</string>
+    <string name="profile_appliances_dvd">Dvd or Bluray</string>
+    <string name="profile_appliances_digital_tv_box">Digital TV box</string>
+    <string name="profile_appliances_games_console">Games console</string>
+    <string name="profile_appliances_computer">Computer</string>
+    <string name="profile_appliances_tablet">Tablet</string>
+    <string name="profile_appliances_electric_shower">Electric shower</string>
+    <string name="profile_appliances_ev_charger">Charger electric vehicle</string>
+    <string name="profile_appliances_swimming_pool">Swimming pool</string>
+    <string name="profile_appliances_sauna">Sauna</string>
+    <string name="profile_properties_type">Type</string>
+    <string name="profile_properties_size">Size</string>
+    <string name="profile_properties_age">Age</string>
+    <string name="profile_properties_homeowner">Homeowner / Renter</string>
+    <string name="profile_properties_location">Postal Code</string>
+    <string name="error_input_incorrect">Input incorrect</string>
+    <string name="profile_occupants_number">Number of occupants</string>
+    <string name="profile_occupants_type">Occupant type</string>
+    <string name="profile_heating_space">Space Heating Type</string>
+    <string name="profile_heating_water">Water Heating Type</string>
+    <string name="profile_heating_solar_power">Photovoltaic solar power</string>
+    <string name="selection_drop_down_hint">Please select</string>
+    <string name="error_post_code_incorect">Post code not valid</string>
+    <string name="circle_chart_second_past">used</string>
+    <string name="recommendation_current_title">Tip!</string>
+    <string name="recommendation_previous_title">Insight!</string>
+    <string name="recommendation_T10">Don\'t leave appliances on standby</string>
+    <string name="recommendation_T20">Unplug appliances when on holiday</string>
+    <string name="recommendation_T30">Purchase a standby reduction device</string>
+    <string name="recommendation_T40">If you don\'t use the clock on your microwave, turn it off at the plug when you\'re not using it to cook.</string>
+    <string name="recommendation_T50">Use eco setting on dishwasher</string>
+    <string name="recommendation_T60">Fully load your dishwasher</string>
+    <string name="recommendation_T70">Run dishwasher at off-peak times</string>
+    <string name="recommendation_T80">Purchase a more efficient dishwasher</string>
+    <string name="recommendation_T90">Don\'t keep the oven door open for too long while you\'re using it</string>
+    <string name="recommendation_T100">Rather than heating the pan on the hob, use an electric kettle to boil water for cooking</string>
+    <string name="recommendation_T110">Always use the right size pan and cooking ring. And put a lid on to keep as much heat in as you can</string>
+    <string name="recommendation_T120">Whenever you can, use a pressure cooker or microwave for cooking.</string>
+    <string name="recommendation_T130">A steamer or segmented pan means you can cook different vegetables on one ring</string>
+    <string name="recommendation_T140">When cooking on the hob, make sure the gas is only heating the bottom of the pan.</string>
+    <string name="recommendation_T150">Switch your oven off sooner - many things will carry on cooking while the oven cools down</string>
+    <string name="recommendation_T160">When boiling vegetables, only use just enough water to cover them</string>
+    <string name="recommendation_T170">Use your toaster instead of making toast under the grill</string>
+    <string name="recommendation_T180">Purchase a more efficient kettle</string>
+    <string name="recommendation_T190">Do washing at off-peak times</string>
+    <string name="recommendation_T200">Make sure fully loading washing machine</string>
+    <string name="recommendation_T210">Use low temperature washing machine modes</string>
+    <string name="recommendation_T220">Use different modes on washing machine</string>
+    <string name="recommendation_T230">Hang washing outside to dry</string>
+    <string name="recommendation_T240">Don\'t overload clothes dryer</string>
+    <string name="recommendation_T250">Don\'t overdry clothes in dryer</string>
+    <string name="recommendation_T260">Don\'t dry clothes directly on radiators</string>
+    <string name="recommendation_T270">Clean the filters regularly in your dryer</string>
+    <string name="recommendation_T280">Purchase Eco Balls to use in the tumble drier. They make gaps in the washing to let the heat move around more freely - so clothes will dry quicker</string>
+    <string name="recommendation_T290">Purchase a more efficient washing machine</string>
+    <string name="recommendation_T300">Purchase a more efficient clothes dryer</string>
+    <string name="recommendation_T310">Use outdoor lighting timers</string>
+    <string name="recommendation_T320">Check outdoor lighting timers</string>
+    <string name="recommendation_T330">Turn off lights when you do not need it</string>
+    <string name="recommendation_T340">Install energy efficient lightbulbs</string>
+    <string name="recommendation_T350">Use only one freezer and fridge</string>
+    <string name="recommendation_T360">Load and unload your fridge or freezer as quickly as you can, so the doors aren\'t open too long</string>
+    <string name="recommendation_T370">Plan what you want for a meal and get it out of the fridge or freezer in one go</string>
+    <string name="recommendation_T380">Don\'t put hot food directly into your fridge. Let it cool down first, or your fridge will have to work harder</string>
+    <string name="recommendation_T390">Check freezer and fridge door seals</string>
+    <string name="recommendation_T400">Defrost freezer and fridge regularly</string>
+    <string name="recommendation_T410">Regularly dust the condenser coils at the back of your fridge and freezer</string>
+    <string name="recommendation_T420">Check freezer and fridge temperatures</string>
+    <string name="recommendation_T430">Purchase a more efficient fridge / freezer</string>
+    <string name="recommendation_T440">Set thermostat temperature to 18-21</string>
+    <string name="recommendation_T450">Turn heating thermostat down 1 degree</string>
+    <string name="recommendation_T460">Check heating timers set optimally / try heating for 30 minutes less</string>
+    <string name="recommendation_T470">Don’t heat unused rooms</string>
+    <string name="recommendation_T480">Turn heating off when on holiday</string>
+    <string name="recommendation_T490">Use draught excluders</string>
+    <string name="recommendation_T500">Use central heating rather than portable heaters</string>
+    <string name="recommendation_T510">Don\'t block radiators with curtains or furniture</string>
+    <string name="recommendation_T520">Keep curtains open when sunny</string>
+    <string name="recommendation_T530">Close curtains at night when cold outside</string>
+    <string name="recommendation_T540">Install boiler scale inhibitor</string>
+    <string name="recommendation_T550">Get boiler serviced</string>
+    <string name="recommendation_T560">Purchase a more efficient boiler</string>
+    <string name="recommendation_T570">Install thermostatic radiator valves</string>
+    <string name="recommendation_T580">Install thermostat on heating</string>
+    <string name="recommendation_T590">Install heating timer</string>
+    <string name="recommendation_T600">Install smart heating thermostat</string>
+    <string name="recommendation_T610">Install more loft insulation</string>
+    <string name="recommendation_T620">Install insulation on loft hatch</string>
+    <string name="recommendation_T630">Install cavity wall insulation</string>
+    <string name="recommendation_T640">Install solid wall insulation</string>
+    <string name="recommendation_T650">Install double glazing</string>
+    <string name="recommendation_T660">Install secondary double glazing</string>
+    <string name="recommendation_T670">Draught proof windows and doors</string>
+    <string name="recommendation_T680">Seal unused chimney</string>
+    <string name="recommendation_T690">Install a chimney balloon</string>
+    <string name="recommendation_T700">Turn down water temperature</string>
+    <string name="recommendation_T710">Have a shower instead of a bath</string>
+    <string name="recommendation_T720">Check hot water system for limescale</string>
+    <string name="recommendation_T730">Purchase low-flow showerheads</string>
+    <string name="recommendation_T740">Purchase hot water jacket</string>
+    <string name="recommendation_T750">Install hot water thermostat</string>
+    <string name="recommendation_T760">Install hot water timer</string>
+    <string name="recommendation_T770">Lag hot water pipes</string>
+    <string name="message_m041_title">Did you notice the new pie chart\?</string>
+    <string name="message_m041_body">We are not only showing you your realtime usage. You can also see which activity is using electricity.</string>
+    <string name="message_m042_title">Did you notice the new tips\?</string>
+    <string name="message_m042_body">Check the section below your budget overview. We show you relevant tips based on the appliances you have. That gives you more information about saving energy!</string>
+    <string name="message_show_me_link">Show me</string>
+    <string name="disaggregation_always_on">Always on</string>
+    <string name="disaggregation_cleaning">Cleaning</string>
+    <string name="disaggregation_cooking">Cooking</string>
+    <string name="disaggregation_laundry">Laundry</string>
+    <string name="disaggregation_lighting">Lighting</string>
+    <string name="disaggregation_refrigeration">Refrigeration</string>
+    <string name="disaggregation_space_heatihg">Space heating</string>
+    <string name="disaggregation_water_heating">Water heating</string>
+    <string name="disaggregation_other">Other</string>
+    <string name="disaggregation_entertainment">Entertainment</string>
+    <string name="disaggregation_electric_vehicle">Electric vehicle</string>
+    <string name="disaggregation_pool_or_sauna">Pool or sauna</string>
+    <string name="no_recommendation_message">Unfortunately we don’t have any tips for you at this moment. We’ll keep searching for you!</string>
+    <string name="popup_details_button_hours">More insights here</string>
+    <string name="popup_details_button_days">More insights here</string>
+    <string name="more_info_dialog_button">Close</string>
+    <string name="more_info_dialog_title_day">Your usage on</string>
+    <string name="more_info_dialog_title_hour">Your usage from</string>
+    <string name="more_info_dialog_title_hour_second">to</string>
+    <string name="more_info_dialog_title_hour_third">on</string>
+    <string name="more_info_dialog_total">Total</string>
+    <string name="more_info_dialog_description">Below you can see exactly how much energy your appliances have used in euros. This will provide you an insight on where you can make some savings.</string>
+    <string name="snackbar_error_message">Please complete your profile. Your profile is complete\? Please be patient, we display your consumption data asap!</string>
+    <string name="energy_details_current_month_title">Energy budget</string>
+    <string name="gas_details_current_month_title">Gas budget</string>
+    <string name="message_m043_title">We are noticing a high usage</string>
+    <string name="message_m043_body">Something in your house is using a lot more energy than we are used to. Are you curious to what it is\? Look it up in your ‘actual usage’. We will show you what devices are on.</string>
+    <string name="message_m044_title">Give us your opinion and earn a badge!</string>
+    <string name="message_m044_body">Do you have time to answer some questions with ‘thumb up’ or ‘thumb down’\? Great, we are very curious about your opinion on the next 5 questions.</string>
+    <string name="tip_t006_title" translatable="false"></string>
+    <string name="tip_t006_body">I would like to receive information about a good offer based on my profile.</string>
+    <string name="tip_t007_title" translatable="false"></string>
+    <string name="tip_t007_body">If it turns out that one of my appliances is using a lot of energy, I would like to receive an offer for a more energy friendlier appliance.</string>
+    <string name="tip_t008_title" translatable="false"></string>
+    <string name="tip_t008_body">If I’m exceeding my energy bundle, I would like to receive information on a good offer to lower my energy usage and save money!</string>
+    <string name="tip_t009_title" translatable="false"></string>
+    <string name="tip_t009_body">Even though I’m not exceeding my energy bundle, I would still like to receive information on a good offer to lower my energy usage.</string>
+    <string name="tip_t0010_title" translatable="false"></string>
+    <string name="tip_t0010_body">I would like to receive information on energy saving products.</string>
+    <string name="challenge_c044_title">Thanks for giving us your opinion!</string>
+    <string name="challenge_c044_body">You have answered all our questions, thank you very much. This way you have given us some more information to optimize this app. That\'s why you have earned a badge! Congratulations!</string>
+    <string name="message_my_usage_link">My usage</string>
+    <string name="message_im_in_link">I\'m in</string>
+    <string name="challenge_c041_title">You’ve found it!</string>
+    <string name="challenge_c041_body">You’ve found the update screen! This screen will now also show you your activities and how much energy they will use (forecasted) or have used. Don’t forget to complete your profile or else you’ll see the wrong data or no data at all.</string>
+    <string name="events_appliances_refrigeration">Refrigeration</string>
+    <string name="events_appliances_always_on">Always on</string>
+    <string name="events_appliances_oven">Oven</string>
+    <string name="events_appliances_dishwasher">Dishwasher</string>
+    <string name="events_appliances_washing_machine">Washing Machine</string>
+    <string name="events_appliances_dryer">Drier</string>
+    <string name="insight_status_0">Wow, you did great!</string>
+    <string name="insight_status_1">Well done!</string>
+    <string name="insight_status_2">Nicely done</string>
+    <string name="insight_status_3">No change</string>
+    <string name="insight_status_4">Just a little bit higher</string>
+    <string name="insight_status_5">That’s quite a big difference</string>
+    <string name="insight_status_6">Ouch, that’s a big difference</string>
+    <string name="is_positive_1">more</string>
+    <string name="is_positive_0">less</string>
+    <string name="no_insights_recommendation_message">Unfortunately we don’t have any insights for you at this moment. We’ll keep searching for you!</string>
+    <string name="consumption_bundle_segment_title">Bundle</string>
+    <string name="consumption_appliances_segment_title">Appliances</string>
+    <string name="consumption_usage_month_title">Usage %1$s</string>
+    <string name="appliance_efficiency">Appliance efficiency</string>
+    <string name="label_title_electricity_6_0" translatable="false">%d Watt</string>
+    <string name="monthly_appliances_info">Below you will find your appliances sorted on efficiency.</string>
+    <string name="monthly_appliances_efficiency_calculated">How is my efficiency calculated\?</string>
+    <string name="efficiency_calculated_body" formatted="false">To calculate the efficiency values, we compare your electricity consumption with a typical consumption for your household size. The efficiency values are percentage values and will vary between 0 and 100%. 100% correspond to a very efficient appliance with high energy-saving behaviour and 0% to a very inefficient appliance with low energy-saving behaviour.</string>
+    <string name="dashboard_new_bundle">New bundle in %1$d days</string>
+    <string name="dashboard_updated_label">updated %1$d seconds ago</string>
+    <string name="meter_reading_popup_message">Meter reading</string>
+    <string name="dashboard_badges_title">Get better and earn more badges</string>
+    <string name="dashboard_badges_shortcut">All badges</string>
+    <string name="appliances_efficiency_title">Efficiency</string>
+    <string name="appliances_usage_title">kWh</string>
+    <string name="appliances_empty_list_info">No appliances currently available</string>
+    <string name="efficiency_improvement">Efficiency improvement</string>
+    <string name="days_remaining">Days remaining</string>
+    <string name="efficiency_challenge">%1$s competition</string>
+    <string name="unknown_meter_reading" translatable="false">--</string>
+    <string name="challenge_efficiency_segment_title">Efficiency</string>
+    <string name="challenge_about_segment_title">About</string>
+    <string name="challenge_points_segment_title">Points</string>
+    <string name="challenge_points_title">Your point balance</string>
+    <string name="challenge_points_no_data">No points due to missing data</string>
+    <string name="challenge_about_what_are_title">What are challenges\?</string>
+    <string name="challenge_about_what_are_description" formatted="false">Each month you can participate in a competition. The target is to improve your appliance efficiency. This competition will refer to the appliance with the lowest efficiency in your household. The competition lasts for 28 days in which you can try to make your consumption more efficient. You will start with your individual efficiency value. The highest achievable efficiency is 100%.</string>
+    <string name="challenge_about_how_to_compete_title">How can I participate in a competition\?</string>
+    <string name="challenge_about_how_to_compete_description">You will receive a notification when the competition starts. At the beginning of the competition you will find out which appliance is chosen for this month. It is up to you on how to improve your efficiency. Our recommendations and tips will help you!</string>
+    <string name="challenge_every_month_title">What is happening in the following months\?</string>
+    <string name="challenge_every_month_description">Each month there will be a new competition! Your efficiency improvement will be calculated monthly in comparison to other users, that means: if you are not pleased with your score, you still have the chance to improve it next month! In case you cannot finish the competition (e.g. due to missing data), you can participate in another one next month!</string>
+    <string name="efficiency_challenge_title">%1$s competition</string>
+    <string name="efficiency_challenge_date">1 - 28 %1$s</string>
+    <string name="efficiency_challenge_no_data">No competition available</string>
+    <string name="efficiency_challenge_status_complete">Competition finished</string>
+    <string name="efficiency_challenge_status_incomplete">Competition incomplete</string>
+    <string name="efficiency_challenge_shortcut_efficiency">Efficiency\nimprovement</string>
+    <string name="efficiency_challenge_shortcut_rank">Current\nrank</string>
+    <string name="efficiency_challenge_shortcut_points">Points\nestimate</string>
+    <string name="meda_samba_configuration_title">Connection to Ynni</string>
+    <string name="meda_introduction_text_first">Connect with Ynni in a few steps</string>
+    <string name="meda_introduction_text_second">During the setup process you will be guided along the following steps:</string>
+    <string name="meda_introduction_step_first">Connect your phone to the receiver unit</string>
+    <string name="meda_introduction_step_second">Connect the receiver to your WiFi network</string>
+    <string name="meda_introduction_step_third">Reconnect your phone to your home network</string>
+    <string name="meda_introduction_text_third">After these steps the receiver unit is setup and you can continue with your profile setup</string>
+    <string name="meda_open_wifi_settings_first">Connect your phone to the receiver unit</string>
+    <string name="meda_open_wifi_settings_second">To enable the connection, you need to temporarily connect to the \"MeDa-at-Home\" WiFi network. If you are using an Android Smartphone, make sure to deactivate the Smart Network Switch.</string>
 
     <string name="meda_open_wifi_settings_step_first">1. Open WiFi Settings</string>
     <string name="meda_open_wifi_settings_step_second">2. On the back of the SmartBridge you’ll find information needed to connect</string>
@@ -45,20 +496,718 @@
     <string name="meda_open_wifi_settings_step_fourth">4. The password is sbwf- plus the SmartBridge shortcode\n <i>- This is case-sensitive -</i></string>
     <string name="meda_open_wifi_settings_step_fifth">5. Return to this app.</string>
 
+    <string name="meda_this_app">This App</string>
+    <string name="meda_wifi_settings">WiFi Settings</string>
+    <string name="meda_open_wifi_settings_action">Open WiFi Settings</string>
+    <string name="meda_connecting_to_station_first">Connecting phone to MeDa Station…</string>
+    <string name="meda_connecting_to_station_second">This may take a moment.</string>
     <string name="meda_connect_station_to_wifi_first">Select your home network</string>
-    <string name="onboarding_enter_password">Enter your WiFi password</string>
-    <string name="connected">Connected!</string>
-    <string name="connecting">Connecting</string>
-    <string name="goto_wifi_settings">Go to WiFi settings</string>
-    <string name="verifying_connection">We are verifying your connection</string>
-    <string name="connect_pop_up">Connect</string>
-    <string name="cancel_pop_up">Cancel</string>
-
+    <string name="meda_connect_station_to_wifi_second">Choose your home network to connect with the receiver unit</string>
+    <string name="efficiency_chart_no_data_info">no data available</string>
+    <string name="efficiency_month_title">Your %1$s efficiency</string>
+    <string name="efficiency_chart_popup_efficiency">Efficiency: %s</string>
+    <string name="efficiency_chart_popup_improvement">Improvement: %s</string>
+    <string name="meda_connecting_station_to_network_first">Connecting receiver unit to network..</string>
+    <string name="meda_connecting_station_to_network_second">This may take a moment.</string>
+    <string name="meda_reconnect_phone_first">The receiver unit is now connected to your phone</string>
+    <string name="meda_reconnect_phone_second">You will now reconnect this phone to your home network.</string>
+    <string name="meda_reconnect_phone_step_first">1. Open WiFi Settings</string>
+    <string name="meda_reconnect_phone_step_second">2. Select your home WiFi Network</string>
+    <string name="meda_reconnect_phone_step_third">3. Come back to Ynni</string>
+    <string name="meda_completed_first">We are verifying the connection</string>
+    <string name="meda_completed_second">We are verifying the connection between your home network and the receiver unit</string>
+    <string name="meda_wifi_password_first">Please enter password for %s</string>
+    <string name="meda_wifi_password_second">We need this to connect the receiver unit to this network</string>
+    <string name="meda_wifi_password_hint">Password</string>
+    <string name="points_estimate_box_title">Points estimate</string>
+    <string name="points_estimate_box_no_points">No points due to missing data</string>
+    <string name="points_estimate_box_rank">Rank</string>
+    <string name="points_estimate_box_efficiency">Efficiency</string>
+    <string name="points_estimate_box_points">Points</string>
+    <string name="points_estimate_box_earns">earns</string>
+    <string name="appliances_toolbar_title">Appliances</string>
+    <string name="points_history_list_title">Point history</string>
+    <string name="points_history_challenge_name">%1$s competition</string>
+    <string name="settings_meda_title">Connection to the receiver unit</string>
+    <string name="settings_meda_description">Connect your receiver unit to your wireless network at home.</string>
+    <string name="rank_graph_month_title">Your %1$s rank</string>
+    <string name="registration_user_verification_error">Please enter the correct username</string>
+    <string name="points_estimate_box_title_completed">Points earned</string>
+    <string name="enable_remote_access_dialog_title">Upgrade your App now!</string>
+    <string name="enable_remote_access_dialog_body">Once you upgrade your App you can use a bunch of new functionalities and have a look at your data from anywhere you want. This can be very convenient if you are on the road and still want to have an overview. Check it out!</string>
+    <string name="enable_remote_access_dialog_cta">Enable remote access</string>
+    <string name="meda_reconecting_phone_to_wifi_first">Reconnecting phone to WiFi</string>
+    <string name="meda_reconecting_phone_to_wifi_second">This may take a moment.</string>
+    <string name="meda_connect_to_wifi_manually">Connect manually</string>
+    <string name="meda_check_proper_meda_configuration_first">Checking configuration..</string>
+    <string name="meda_check_proper_meda_configuration_second">This may take a moment.</string>
+    <string name="meda_configuration_error_action">Reconfigurate receiver unit</string>
+    <string name="meda_configuration_error_explanation">Configuration was not confirmed successfully.</string>
+    <string name="meda_configuration_error_title">Configuration error</string>
+    <string name="setup_samba">Ynni Upgrade</string>
+    <string name="enable_additional_features">Enable additional features</string>
+    <string name="enable_additional_features_info">You have the opportunity to expand your app by adding new features! Compare your electricity consumption with the consumption of other Ynni users, check the consumption of each appliance and participate in competitions! Check our preview to see what is possible! \nIn order to activate these features, we need your permission. Please read the terms of use.</string>
+    <string name="more_about_features"><u>More about these features in 5 swipes</u></string>
+    <string name="enable_additional_features_terms">Yes, I agree to the \u003Ca href\u003D\u0022http://Ynni.com/GTaC/160506_DSE_App_Net2Grid.htm\u0022\u003Eterms of use\u003C/a\u003E</string>
+    <string name="enable_additional_features_terms_full">Yes, I agree to the terms of use</string>
+    <string name="enable_additional_features_terms_underlined">terms of use</string>
+    <string name="enable_additional_features_cancel">Cancel</string>
+    <string name="enable_additional_features_agree">I agree</string>
+    <string name="enable_additional_features_terms_url">http://Ynni.com/nutzungsbedingungen</string>
+    <string name="efficiency_challenge_share_title">I achieved rank</string>
+    <string name="efficiency_challenge_share_rank_value">%1$d of %2$d</string>
+    <string name="efficiency_challenge_share_challenge_name">In the %1$s competition</string>
+    <string name="efficiency_challenge_share_more_info">More info: www.Ynni.com</string>
+    <string name="message_m045_body">Ynni shows you the consumption of each appliance and calculates its efficiency. Click here to find out how it works.</string>
+    <string name="message_m045_title">How efficient are your appliances\?\n</string>
+    <string name="challenge_c045_body">You are the leader! Now you know your overall consumption, your appliance-based consumption and how the efficiency calculation works. We cannot offer you diamonds but a badge for sure!\n</string>
+    <string name="challenge_c045_title">Lord of appliances!</string>
+    <string name="feature_slide_1_content">With Ynni you can save money more easily. You can get insights on your energy data but also have a look on how you do compared to similar households. Activate the features and have a look!</string>
+    <string name="feature_slide_2_content">Your energy data should be even more tangible! There are different situation in the daily life that require different amounts of electricity. You want to know how much you spend for doing the laundry\? No problem with this feature! Also we provide you with some tips to save even more!</string>
+    <string name="feature_slide_3_content">Use this feature to check the consumption and costs of your appliances! Discover the appliance that need the most!</string>
+    <string name="feature_slide_4_content">An efficient use of your appliance can make you successful! Enter a competition and be better than other users!</string>
+    <string name="feature_slide_5_content">At the gym, your office or on vacation; with the upgrade you can use Ynni everywhere and always have a look at your energy data. Great, right\? Impress your friends and family with this new technology!</string>
+    <string name="feature_slide_1_title">Knowing = saving</string>
+    <string name="feature_slide_2_title">Aggregated insights</string>
+    <string name="feature_slide_3_title">Check your appliances!</string>
+    <string name="feature_slide_4_title">Improve yourself!</string>
+    <string name="feature_slide_5_title">Ynni everywhere</string>
+    <string name="enable_new_features">Enable new features</string>
+    <string name="fail_send_additional_features_agreement">Response for agreement failed and upgrade is not possible at the moment.</string>
+    <string name="on_no_accept_terms_additional_features">Please accept terms of use to upgrade.</string>
+    <string name="additional_features_enabled">Additional features enabled</string>
+    <string name="additional_features_enabled_info">Thank you for upgrading. Now you can explore the new features. Have fun!\n</string>
+    <string name="continue_to_dashboard">Continue to dashboard</string>
+    <string name="setting_features_title">Enable additional features</string>
+    <string name="setting_features_description">Upgrade your App and check out new features</string>
+    <string name="msg_meda_config_not_completed_last_time">Checking configuration…</string>
+    <string name="message_r00x_title">Are you ready for the competition\?\n</string>
+    <string name="message_r00x_body_l3">This month we challenge you to improve your %s efficiency! Are you ready\? You will receive points for improving. Once all 5 competition are done, you can convert your points into an Amazon voucher. Save energy and earn a reward! Let\'s start! \n</string>
+    <string name="message_r00x_body_l4">This month we challenge you to improve your %s efficiency! Are you ready\? Have a look at how you are doing compared to other Ynni users. This may help you to develop a better understanding of your consumption.\n</string>
+    <string name="message_r00x_body_l5">This month we challenge you to improve your efficiency! Are you ready\? You will receive points for improving. Once all 5 competitions are done, you can convert your points into an Amazon voucher. Save energy and earn a reward!  Have a look at how you are doing compared to other Ynni users. This may help you to develop a better understanding of your consumption.</string>
+    <string name="message_r00x_body_profile_incomplete">Make sure to complete your profile!\n</string>
+    <string name="message_r00x_cta">Click here for more information on the competition\n</string>
+    <string name="btn_explore_features">Explore features</string>
+    <string name="convert_voucher_button">Convert to voucher code</string>
+    <string name="create_voucher_toolbar_title">Points</string>
+    <string name="create_voucher_title">Create Amazon Voucher</string>
+    <string name="create_voucher_content">Your %1$s points will be converted to an Amazon voucher code with a value of %2$s.</string>
+    <string name="create_voucher_button_create">Create voucher</string>
+    <string name="create_voucher_unavailable_message">Your voucher can be created once you completed the last competition!</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="generated_voucher_title">Amazon Voucher Code</string>
+    <string name="generated_voucher_content">Use the voucher code below to buy something at Amazon!</string>
+    <string name="voucher_code_hint">Voucher code</string>
+    <string name="create_voucher_terms">"Yes, I want to convert my points into an Amazon Voucher. "</string>
+    <string name="create_voucher_terms_url">http://Ynni.com/nutzungsbedingungen</string>
+    <string name="efficiency_challenge_graph_best">Best</string>
+    <string name="efficiency_challenge_graph_worst">Worst</string>
+    <string name="meda_needs_setup_before_registration">Please setup your receiver unit before continuing with registration.</string>
+    <string name="message_m046_title">Do you want more\? Discover new features for the App!</string>
+    <string name="message_m046_body">Activate more exciting features in your app! In the preview we show you the newest stuff. Just click on \"Explore new features\"!\n</string>
+    <string name="meda_error_email_increct_or_already_registered">Your email address is incorrect or already registered</string>
+    <string name="message_share_button">Share this</string>
+    <string name="quiz_question_QUIZ01Q01">Do you use car sharing services\?</string>
+    <string name="quiz_question_QUIZ01Q02">Did you laugh today\?</string>
+    <string name="quiz_question_QUIZ01Q03">What do you think about photovoltaic systems\?</string>
+    <string name="quiz_question_QUIZ01Q04">What do you think about SegWays\?</string>
+    <string name="quiz_question_QUIZ01Q05">What do you think about the trend to use an electric vehicle\?</string>
+    <string name="quiz_question_QUIZ01Q06">Were you satisfied with the installation of your new smart meter\?</string>
+    <string name="quiz_question_QUIZ01Q07">Would you wash your laundry during the night if it was less expensive\?</string>
+    <string name="quiz_question_QUIZ01Q08">What do you think about your annual electricity bill\?</string>
+    <string name="quiz_question_QUIZ01Q09">Do you need 24/7 customer service from your energy provider\?</string>
+    <string name="quiz_question_QUIZ01Q10">How would you estimate your energy consumption\?</string>
+    <string name="quiz_question_QUIZ02Q01">Do you like doing sport\?</string>
+    <string name="quiz_question_QUIZ02Q02">Call or chat messages\?</string>
+    <string name="quiz_question_QUIZ02Q03">Would you rather live in the suburbs or in the city\?</string>
+    <string name="quiz_question_QUIZ02Q04">Do you use an egg-timer\?</string>
+    <string name="quiz_question_QUIZ02Q05">Do you own/use appliances for intelligent house regulation (Smart Home)\?</string>
+    <string name="quiz_question_QUIZ02Q06">How important is electricity produced by using renewable energy sources for you\?</string>
+    <string name="quiz_question_QUIZ02Q07">Do you have a quiz app on your phone\?</string>
+    <string name="quiz_question_QUIZ02Q08">Would you like to charge your phone wirelessly\?</string>
+    <string name="quiz_question_QUIZ02Q09">Would you recommend a product to your friend for a bonus\?</string>
+    <string name="quiz_question_QUIZ02Q10">Can you imagine concluding a DSL contract with your energy provider\?</string>
+    <string name="quiz_question_QUIZ03Q01">How important is data privacy protection for you\?</string>
+    <string name="quiz_question_QUIZ03Q02">Did you (ever) think about getting photovoltaic systems\?</string>
+    <string name="quiz_question_QUIZ03Q03">How do you like the e-bike trend\?</string>
+    <string name="quiz_question_QUIZ03Q04">Does the app encourage you to save energy\?</string>
+    <string name="quiz_question_QUIZ03Q05">What is being served on your table\?</string>
+    <string name="quiz_question_QUIZ03Q06">How do you read your newspaper preferably\?</string>
+    <string name="quiz_question_QUIZ03Q07">How do you like cashless payments\?</string>
+    <string name="quiz_question_QUIZ03Q08">Do you have a smoke detector\?</string>
+    <string name="quiz_question_QUIZ03Q09">The thermal energy of a ton of garbage is equal to how much liter of fuel oil\?</string>
+    <string name="quiz_question_QUIZ03Q10">The country with the worldwide highest energy consumption per capita is …\?</string>
+    <string name="quiz_question_QUIZ03Q11">Which power plant can be quickly upshifted and downshifted\?</string>
+    <string name="quiz_question_QUIZ03Q12">How much is the heat energy of total energy consumption in German households\?</string>
+    <string name="quiz_question_QUIZ03Q13">Where is the European Energy Exchange located\?</string>
+    <string name="quiz_question_QUIZ03Q14">Which country largely uses the geothermic power for energy and heat supply\?</string>
+    <string name="quiz_question_QUIZ03Q15">Which source of energy can be gained by \"fracking\"\?</string>
+    <string name="quiz_question_QUIZ04Q01">Do you think a sustainable lifestyle is important\?</string>
+    <string name="quiz_question_QUIZ04Q02">If you win the new energy bonus, will you buy a new electric vehicle\?</string>
+    <string name="quiz_question_QUIZ04Q03">Where do you prefer to go shopping\?</string>
+    <string name="quiz_question_QUIZ04Q04">Where are you planning to go to on your next holiday\?</string>
+    <string name="quiz_question_QUIZ04Q05">Have you read a data privacy statement before\?</string>
+    <string name="quiz_question_QUIZ04Q06">Would you reconstruct your house/apartment to boost its energy efficiency\?</string>
+    <string name="quiz_question_QUIZ04Q07">Have you ever seen a thermal image of your house/apartment\?</string>
+    <string name="quiz_question_QUIZ04Q08">Can you imagine paying with your phone\?</string>
+    <string name="quiz_question_QUIZ04Q09">Do you have an alarm system\?</string>
+    <string name="quiz_question_QUIZ04Q10">A bun has about 150 calories. Turning this energy into heat you could:</string>
+    <string name="quiz_question_QUIZ04Q11">Why were the clocks in Venezuela set half an hour forward in May 2016\?</string>
+    <string name="quiz_question_QUIZ04Q12">Which street of which city was illuminated with an electric light bulb in 1879\?</string>
+    <string name="quiz_question_QUIZ04Q13">Some animals are able to do electric shocks. The highest voltage is generated by:</string>
+    <string name="quiz_question_QUIZ04Q14">The energy consumption per capita is in Russia higher than in Germany.</string>
+    <string name="quiz_question_QUIZ04Q15">How high is the average energy consumption per capita in the US\?</string>
+    <string name="quiz_question_QUIZ05Q01">When is the last time you wrote a letter\?</string>
+    <string name="quiz_question_QUIZ05Q02">Did you already recommend your energy provider to others\?</string>
+    <string name="quiz_question_QUIZ05Q03">Would you buy energy produced by the photovoltaic systems of your neighbour\?</string>
+    <string name="quiz_question_QUIZ05Q04">How high is the amount of taxes and levies in the electricity price\?</string>
+    <string name="quiz_question_QUIZ05Q05">Do you really try to save energy\?</string>
+    <string name="quiz_question_QUIZ05Q06">Do you pay attention to CO2 emissions when you travel (CO2 neutral traveling)\?</string>
+    <string name="quiz_question_QUIZ05Q07">How many apps do you have on your smartphone\?</string>
+    <string name="quiz_question_QUIZ05Q08">Have you ordered groceries online before\?</string>
+    <string name="quiz_question_QUIZ05Q09">Do you use the bike for short distances\?</string>
+    <string name="quiz_question_QUIZ05Q10">Do you care about environmental certificates/fairtrade when buying products\?</string>
+    <string name="quiz_question_QUIZ05Q11">The new electric trails should run under the surface.</string>
+    <string name="quiz_question_QUIZ05Q12">Are all windows closed\?</string>
+    <string name="quiz_question_QUIZ05Q13">How far would a penguin get with the energy of a liter of gasoline\?</string>
+    <string name="quiz_question_QUIZ05Q14" formatted="false">With how much percent of their fur can polar bears convert daylight into energy\?</string>
+    <string name="quiz_question_QUIZ05Q15">How much energy does one kilowatt hour require\?</string>
+    <string name="quiz_question_QUIZ05Q16">The heat of X cows is necessary to heat an 100m² apartment in an old building.</string>
+    <string name="quiz_question_QUIZ05Q17">How fast does an electron move in a grid\?</string>
+    <string name="quiz_question_QUIZ05Q18">During which process is biogas generated\?</string>
+    <string name="quiz_question_QUIZ05Q19">How does the sun produce energy\?</string>
+    <string name="quiz_question_QUIZ05Q20">It is possible to make a car run on alga.</string>
+    <string name="quiz_question_QUIZ05Q21">A smart meter is a …</string>
+    <string name="quiz_question_QUIZ05Q22">What is long-distance heating\?</string>
+    <string name="quiz_question_QUIZ05Q23">The amount of fuel of a tanked up Ariane 5G rocket is as heavy as:</string>
+    <string name="quiz_question_QUIZ05Q24">The world\'s largest hydro station in China can generate as much energy as:</string>
+    <string name="quiz_question_QUIZ05Q25">… is/are no binding member of the Kyoto-protocol under international law.</string>
+    <string name="quiz_question_QUIZ05Q26">How high is the average price of electricity in Germany\?</string>
+    <string name="quiz_question_QUIZ05Q27">How high is the amount of taxes and levies in the electricity price\?</string>
+    <string name="quiz_question_QUIZ05Q28">The amount of renewable energies in electricity generation in Germany is:</string>
+    <string name="quiz_question_QUIZ05Q29">The largest amount of primary energy consumption in 2015 has …</string>
+    <string name="quiz_question_QUIZ05Q30">How do you call the usage of geothermal energy to generate energy and heating\?</string>
+    <string name="quiz_question_QUIZ06Q01">Would you like offers to more efficient devices\?</string>
+    <string name="quiz_question_QUIZ06Q02">Have you ever heard of block chain\?</string>
+    <string name="quiz_question_QUIZ06Q03">Self-sufficient/climate neutral living\?</string>
+    <string name="quiz_question_QUIZ06Q04">Do you like the app\?</string>
+    <string name="quiz_question_QUIZ06Q05">Are you afraid of the consequences of the climate change\?</string>
+    <string name="quiz_question_QUIZ06Q06">How does your perfect Friday evening look like\?</string>
+    <string name="quiz_question_QUIZ06Q07">What do you think about wind wheels (wind energy)\?</string>
+    <string name="quiz_question_QUIZ06Q08">What do you think is more important\?</string>
+    <string name="quiz_question_QUIZ06Q09">Do you recycle resources\?</string>
+    <string name="quiz_question_QUIZ06Q10">Are you afraid of burglars\?</string>
+    <string name="quiz_question_QUIZ06Q11">Do you often take a bath\?</string>
+    <string name="quiz_question_QUIZ06Q12">LED-candle or real candle\?</string>
+    <string name="quiz_question_QUIZ06Q13">How many households have been supplied by the Thomas Edison power station 1882\?</string>
+    <string name="quiz_question_QUIZ06Q14">How long does a human have to scream to heat up a cup of coffee\?</string>
+    <string name="quiz_question_QUIZ06Q15">If you strung together every power supply line, how far would they reach\?</string>
+    <string name="quiz_question_QUIZ06Q16">How much percentage of heating energy can you save with each degree\?</string>
+    <string name="quiz_question_QUIZ06Q17">With the energy of the methane gas a cow emits each day, you could …</string>
+    <string name="quiz_question_QUIZ06Q18">The world\'s fastest computer consumes as much energy as …</string>
+    <string name="quiz_question_QUIZ06Q19">Who is more efficient at turning sunlight into energy\?</string>
+    <string name="quiz_question_QUIZ06Q20">Hypothetically, it is possible to generate energy with your shoes.</string>
+    <string name="quiz_question_QUIZ06Q21">Which food is most likely to be the basis of a new kind of battery\?</string>
+    <string name="quiz_question_QUIZ06Q22">The electric shock of a crampfish has nearly as much voltage as:</string>
+    <string name="quiz_question_QUIZ06Q23">How much more CO² does an ebay auction emit than a Google query\?</string>
+    <string name="quiz_question_QUIZ06Q24">How much CO² does a train ride emit in comparison to a bus ride\?</string>
+    <string name="quiz_question_QUIZ06Q25" formatted="false">x % of the energy consumption of one household are consumed by heating water.</string>
+    <string name="quiz_question_QUIZ06Q26">How many wind turbines will be standing in Germany by the end of 2016\?</string>
+    <string name="quiz_question_QUIZ06Q27">The world\'s largest hydroelectric power station uses the energy of which river\?</string>
+    <string name="quiz_question_QUIZ06Q28">Today\'s hard coal was created about … years ago.</string>
+    <string name="quiz_question_QUIZ06Q29">How high is the EEG-contribution for household energy customers in Germany\?</string>
+    <string name="quiz_question_QUIZ06Q30">A modern wind engine is able to provide X 4-person households with energy.</string>
+    <string name="quiz_answer_left_QUIZ01Q01">Yes</string>
+    <string name="quiz_answer_left_QUIZ01Q02">Yes</string>
+    <string name="quiz_answer_left_QUIZ01Q03">Good</string>
+    <string name="quiz_answer_left_QUIZ01Q04">Top</string>
+    <string name="quiz_answer_left_QUIZ01Q05">Top</string>
+    <string name="quiz_answer_left_QUIZ01Q06">Yes, everything went fine</string>
+    <string name="quiz_answer_left_QUIZ01Q07">Yes, that makes sense</string>
+    <string name="quiz_answer_left_QUIZ01Q08">It\'s clear to me</string>
+    <string name="quiz_answer_left_QUIZ01Q09">No, I do not call in late</string>
+    <string name="quiz_answer_left_QUIZ01Q10">above average</string>
+    <string name="quiz_answer_left_QUIZ02Q01">No</string>
+    <string name="quiz_answer_left_QUIZ02Q02">I am calling</string>
+    <string name="quiz_answer_left_QUIZ02Q03">City</string>
+    <string name="quiz_answer_left_QUIZ02Q04">Yes</string>
+    <string name="quiz_answer_left_QUIZ02Q05">Yes, I do</string>
+    <string name="quiz_answer_left_QUIZ02Q06">Important</string>
+    <string name="quiz_answer_left_QUIZ02Q07">Yes</string>
+    <string name="quiz_answer_left_QUIZ02Q08">Yes, that sounds amazing</string>
+    <string name="quiz_answer_left_QUIZ02Q09">Sure</string>
+    <string name="quiz_answer_left_QUIZ02Q10">Yes, finally stable connection</string>
+    <string name="quiz_answer_left_QUIZ03Q01">Very important</string>
+    <string name="quiz_answer_left_QUIZ03Q02">Yes</string>
+    <string name="quiz_answer_left_QUIZ03Q03">Top</string>
+    <string name="quiz_answer_left_QUIZ03Q04">Yes, definitely</string>
+    <string name="quiz_answer_left_QUIZ03Q05">Absolutely no meat</string>
+    <string name="quiz_answer_left_QUIZ03Q06">I read it online</string>
+    <string name="quiz_answer_left_QUIZ03Q07">That is not for me</string>
+    <string name="quiz_answer_left_QUIZ03Q08">Yes</string>
+    <string name="quiz_answer_left_QUIZ03Q09">1600 liters</string>
+    <string name="quiz_answer_left_QUIZ03Q10">USA</string>
+    <string name="quiz_answer_left_QUIZ03Q11">gas turbine power plant</string>
+    <string name="quiz_answer_left_QUIZ03Q12" formatted="false">about 70%</string>
+    <string name="quiz_answer_left_QUIZ03Q13">in Leipzig</string>
+    <string name="quiz_answer_left_QUIZ03Q14">Iceland</string>
+    <string name="quiz_answer_left_QUIZ03Q15">hard coal</string>
+    <string name="quiz_answer_left_QUIZ04Q01">Not interested</string>
+    <string name="quiz_answer_left_QUIZ04Q02">Yes, I\'m thinking about it</string>
+    <string name="quiz_answer_left_QUIZ04Q03">online</string>
+    <string name="quiz_answer_left_QUIZ04Q04">I stay in Germany</string>
+    <string name="quiz_answer_left_QUIZ04Q05">Yes, that\'s important</string>
+    <string name="quiz_answer_left_QUIZ04Q06">Sure, why not\?</string>
+    <string name="quiz_answer_left_QUIZ04Q07">Yes</string>
+    <string name="quiz_answer_left_QUIZ04Q08">Absolutely</string>
+    <string name="quiz_answer_left_QUIZ04Q09">Unfortunately not</string>
+    <string name="quiz_answer_left_QUIZ04Q10">melting into 1 kg of steel</string>
+    <string name="quiz_answer_left_QUIZ04Q11">To save energy</string>
+    <string name="quiz_answer_left_QUIZ04Q12">Newcastle upon Tyne, GB</string>
+    <string name="quiz_answer_left_QUIZ04Q13">the electric eel</string>
+    <string name="quiz_answer_left_QUIZ04Q14">True</string>
+    <string name="quiz_answer_left_QUIZ04Q15">12186 kWh</string>
+    <string name="quiz_answer_left_QUIZ05Q01">I do it regularly</string>
+    <string name="quiz_answer_left_QUIZ05Q02">Yes</string>
+    <string name="quiz_answer_left_QUIZ05Q03">Yes</string>
+    <string name="quiz_answer_left_QUIZ05Q04" formatted="false">Less than 50%</string>
+    <string name="quiz_answer_left_QUIZ05Q05">Yes, I try</string>
+    <string name="quiz_answer_left_QUIZ05Q06">Yes</string>
+    <string name="quiz_answer_left_QUIZ05Q07">&gt; 5</string>
+    <string name="quiz_answer_left_QUIZ05Q08">Yes, good service</string>
+    <string name="quiz_answer_left_QUIZ05Q09">No, I use public transportation</string>
+    <string name="quiz_answer_left_QUIZ05Q10">Not at all</string>
+    <string name="quiz_answer_left_QUIZ05Q11">I like that</string>
+    <string name="quiz_answer_left_QUIZ05Q12">I\'d like to get this in the app</string>
+    <string name="quiz_answer_left_QUIZ05Q13">1500 km</string>
+    <string name="quiz_answer_left_QUIZ05Q14" formatted="false">ca. 55%</string>
+    <string name="quiz_answer_left_QUIZ05Q15">ironing 15 shirts</string>
+    <string name="quiz_answer_left_QUIZ05Q16">25 cows</string>
+    <string name="quiz_answer_left_QUIZ05Q17">1.5 million meter per second</string>
+    <string name="quiz_answer_left_QUIZ05Q18">Beer production</string>
+    <string name="quiz_answer_left_QUIZ05Q19">nuclear fission</string>
+    <string name="quiz_answer_left_QUIZ05Q20">True</string>
+    <string name="quiz_answer_left_QUIZ05Q21">smart meter</string>
+    <string name="quiz_answer_left_QUIZ05Q22">summer in the Caribbean</string>
+    <string name="quiz_answer_left_QUIZ05Q23">five SUVs</string>
+    <string name="quiz_answer_left_QUIZ05Q24">1 nuclear power plant</string>
+    <string name="quiz_answer_left_QUIZ05Q25">Russia</string>
+    <string name="quiz_answer_left_QUIZ05Q26">28 cent per kWh</string>
+    <string name="quiz_answer_left_QUIZ05Q27" formatted="false">approximately 50 %</string>
+    <string name="quiz_answer_left_QUIZ05Q28" formatted="false">25,9 %</string>
+    <string name="quiz_answer_left_QUIZ05Q29">hard coal</string>
+    <string name="quiz_answer_left_QUIZ05Q30">photovoltaics</string>
+    <string name="quiz_answer_left_QUIZ06Q01">Yes</string>
+    <string name="quiz_answer_left_QUIZ06Q02">Yes</string>
+    <string name="quiz_answer_left_QUIZ06Q03">Top</string>
+    <string name="quiz_answer_left_QUIZ06Q04">Yes</string>
+    <string name="quiz_answer_left_QUIZ06Q05">Yes</string>
+    <string name="quiz_answer_left_QUIZ06Q06">I am on the couch</string>
+    <string name="quiz_answer_left_QUIZ06Q07">spoiling the landscape</string>
+    <string name="quiz_answer_left_QUIZ06Q08">electricity from renewables</string>
+    <string name="quiz_answer_left_QUIZ06Q09">Yes, of course</string>
+    <string name="quiz_answer_left_QUIZ06Q10">No, I feel save</string>
+    <string name="quiz_answer_left_QUIZ06Q11">I often take a bath</string>
+    <string name="quiz_answer_left_QUIZ06Q12">LED-candle</string>
+    <string name="quiz_answer_left_QUIZ06Q13">2500 households</string>
+    <string name="quiz_answer_left_QUIZ06Q14">1 day, 5 hours &amp; 23 minutes</string>
+    <string name="quiz_answer_left_QUIZ06Q15">45 times around the world</string>
+    <string name="quiz_answer_left_QUIZ06Q16" formatted="false">0.4 %</string>
+    <string name="quiz_answer_left_QUIZ06Q17">run a refrigerator</string>
+    <string name="quiz_answer_left_QUIZ06Q18">60 human brains</string>
+    <string name="quiz_answer_left_QUIZ06Q19">the human (photovoltaics)</string>
+    <string name="quiz_answer_left_QUIZ06Q20">True</string>
+    <string name="quiz_answer_left_QUIZ06Q21">apple</string>
+    <string name="quiz_answer_left_QUIZ06Q22">electrical outlet</string>
+    <string name="quiz_answer_left_QUIZ06Q23">about 9 times as many</string>
+    <string name="quiz_answer_left_QUIZ06Q24">half as much</string>
+    <string name="quiz_answer_left_QUIZ06Q25" formatted="false">5%</string>
+    <string name="quiz_answer_left_QUIZ06Q26">25.980</string>
+    <string name="quiz_answer_left_QUIZ06Q27">Yangtze (China)</string>
+    <string name="quiz_answer_left_QUIZ06Q28">300000 years</string>
+    <string name="quiz_answer_left_QUIZ06Q29">6.354 cent per kWh</string>
+    <string name="quiz_answer_left_QUIZ06Q30">950</string>
+    <string name="quiz_answer_right_QUIZ01Q01">No</string>
+    <string name="quiz_answer_right_QUIZ01Q02">No</string>
+    <string name="quiz_answer_right_QUIZ01Q03">Bad</string>
+    <string name="quiz_answer_right_QUIZ01Q04">Flop</string>
+    <string name="quiz_answer_right_QUIZ01Q05">Flop</string>
+    <string name="quiz_answer_right_QUIZ01Q06">Rather not</string>
+    <string name="quiz_answer_right_QUIZ01Q07">Rather not</string>
+    <string name="quiz_answer_right_QUIZ01Q08">It could be clearer</string>
+    <string name="quiz_answer_right_QUIZ01Q09">Would be a great service</string>
+    <string name="quiz_answer_right_QUIZ01Q10">below-average</string>
+    <string name="quiz_answer_right_QUIZ02Q01">With pleasure!</string>
+    <string name="quiz_answer_right_QUIZ02Q02">I text on WhatsApp.</string>
+    <string name="quiz_answer_right_QUIZ02Q03">Country</string>
+    <string name="quiz_answer_right_QUIZ02Q04">No</string>
+    <string name="quiz_answer_right_QUIZ02Q05">No, I do not</string>
+    <string name="quiz_answer_right_QUIZ02Q06">Not so important</string>
+    <string name="quiz_answer_right_QUIZ02Q07">No</string>
+    <string name="quiz_answer_right_QUIZ02Q08">No, I do not need it</string>
+    <string name="quiz_answer_right_QUIZ02Q09">Absolutely not</string>
+    <string name="quiz_answer_right_QUIZ02Q10">I cannot imagine this</string>
+    <string name="quiz_answer_right_QUIZ03Q01">This is irrelevant</string>
+    <string name="quiz_answer_right_QUIZ03Q02">No</string>
+    <string name="quiz_answer_right_QUIZ03Q03">Flop</string>
+    <string name="quiz_answer_right_QUIZ03Q04">Rather not</string>
+    <string name="quiz_answer_right_QUIZ03Q05">I eat everything</string>
+    <string name="quiz_answer_right_QUIZ03Q06">I like the paper version</string>
+    <string name="quiz_answer_right_QUIZ03Q07">Quite practical!</string>
+    <string name="quiz_answer_right_QUIZ03Q08">No</string>
+    <string name="quiz_answer_right_QUIZ03Q09">250 liter</string>
+    <string name="quiz_answer_right_QUIZ03Q10">Qatar</string>
+    <string name="quiz_answer_right_QUIZ03Q11">coal-fired power plant</string>
+    <string name="quiz_answer_right_QUIZ03Q12" formatted="false">approximately 30%</string>
+    <string name="quiz_answer_right_QUIZ03Q13">in Paris</string>
+    <string name="quiz_answer_right_QUIZ03Q14">South Africa</string>
+    <string name="quiz_answer_right_QUIZ03Q15">natural gas</string>
+    <string name="quiz_answer_right_QUIZ04Q01">very important to me</string>
+    <string name="quiz_answer_right_QUIZ04Q02">No, this is nothing for me</string>
+    <string name="quiz_answer_right_QUIZ04Q03">in stationary retail</string>
+    <string name="quiz_answer_right_QUIZ04Q04">into the distance</string>
+    <string name="quiz_answer_right_QUIZ04Q05">It takes too long</string>
+    <string name="quiz_answer_right_QUIZ04Q06">No, not worth it</string>
+    <string name="quiz_answer_right_QUIZ04Q07">No</string>
+    <string name="quiz_answer_right_QUIZ04Q08">I cannot imagine this</string>
+    <string name="quiz_answer_right_QUIZ04Q09">Yes, I can imagine that</string>
+    <string name="quiz_answer_right_QUIZ04Q10">heating a cup of tea</string>
+    <string name="quiz_answer_right_QUIZ04Q11">shall increase the work ethics</string>
+    <string name="quiz_answer_right_QUIZ04Q12">Philadelphia, USA</string>
+    <string name="quiz_answer_right_QUIZ04Q13">the electric ray</string>
+    <string name="quiz_answer_right_QUIZ04Q14">Wrong</string>
+    <string name="quiz_answer_right_QUIZ04Q15">17235 kWh</string>
+    <string name="quiz_answer_right_QUIZ05Q01">It has been ages …</string>
+    <string name="quiz_answer_right_QUIZ05Q02">No</string>
+    <string name="quiz_answer_right_QUIZ05Q03">No</string>
+    <string name="quiz_answer_right_QUIZ05Q04" formatted="false">More than 50%</string>
+    <string name="quiz_answer_right_QUIZ05Q05">No, not that important to me</string>
+    <string name="quiz_answer_right_QUIZ05Q06">No</string>
+    <string name="quiz_answer_right_QUIZ05Q07">&lt; 5</string>
+    <string name="quiz_answer_right_QUIZ05Q08">No, that makes no sense</string>
+    <string name="quiz_answer_right_QUIZ05Q09">I like to drive fast</string>
+    <string name="quiz_answer_right_QUIZ05Q10">Yes, more often</string>
+    <string name="quiz_answer_right_QUIZ05Q11">Do not dig the ground!</string>
+    <string name="quiz_answer_right_QUIZ05Q12">I do not need this feature</string>
+    <string name="quiz_answer_right_QUIZ05Q13">335 km</string>
+    <string name="quiz_answer_right_QUIZ05Q14" formatted="false">ca. 95%</string>
+    <string name="quiz_answer_right_QUIZ05Q15">baking 5 cakes</string>
+    <string name="quiz_answer_right_QUIZ05Q16">3 cows</string>
+    <string name="quiz_answer_right_QUIZ05Q17">0.000035 meter per second</string>
+    <string name="quiz_answer_right_QUIZ05Q18">Tofu production</string>
+    <string name="quiz_answer_right_QUIZ05Q19">nuclear fusion</string>
+    <string name="quiz_answer_right_QUIZ05Q20">Wrong</string>
+    <string name="quiz_answer_right_QUIZ05Q21">a very small car</string>
+    <string name="quiz_answer_right_QUIZ05Q22">heat from power plants</string>
+    <string name="quiz_answer_right_QUIZ05Q23">two Airbuses A380</string>
+    <string name="quiz_answer_right_QUIZ05Q24">16 nuclear power plants</string>
+    <string name="quiz_answer_right_QUIZ05Q25">USA</string>
+    <string name="quiz_answer_right_QUIZ05Q26">12 cent per kWh</string>
+    <string name="quiz_answer_right_QUIZ05Q27" formatted="false">about 20%</string>
+    <string name="quiz_answer_right_QUIZ05Q28" formatted="false">6,42%</string>
+    <string name="quiz_answer_right_QUIZ05Q29">mineral oil</string>
+    <string name="quiz_answer_right_QUIZ05Q30">geothermic</string>
+    <string name="quiz_answer_right_QUIZ06Q01">No</string>
+    <string name="quiz_answer_right_QUIZ06Q02">No</string>
+    <string name="quiz_answer_right_QUIZ06Q03">Flop</string>
+    <string name="quiz_answer_right_QUIZ06Q04">No</string>
+    <string name="quiz_answer_right_QUIZ06Q05">No</string>
+    <string name="quiz_answer_right_QUIZ06Q06">being out with friends</string>
+    <string name="quiz_answer_right_QUIZ06Q07">great &amp; clean source of energy</string>
+    <string name="quiz_answer_right_QUIZ06Q08">energy-saving programmes</string>
+    <string name="quiz_answer_right_QUIZ06Q09">No, I do not have time</string>
+    <string name="quiz_answer_right_QUIZ06Q10">Yes, I am concerned</string>
+    <string name="quiz_answer_right_QUIZ06Q11">No, I rather take a shower</string>
+    <string name="quiz_answer_right_QUIZ06Q12">real candle</string>
+    <string name="quiz_answer_right_QUIZ06Q13">850 households</string>
+    <string name="quiz_answer_right_QUIZ06Q14">8 years, 7 months &amp; 6 days</string>
+    <string name="quiz_answer_right_QUIZ06Q15">from Berlin to Beijing</string>
+    <string name="quiz_answer_right_QUIZ06Q16" formatted="false">6%</string>
+    <string name="quiz_answer_right_QUIZ06Q17">going by train</string>
+    <string name="quiz_answer_right_QUIZ06Q18">600000 human brains</string>
+    <string name="quiz_answer_right_QUIZ06Q19">the nature (photosynthesis)</string>
+    <string name="quiz_answer_right_QUIZ06Q20">Wrong</string>
+    <string name="quiz_answer_right_QUIZ06Q21">veal sausage</string>
+    <string name="quiz_answer_right_QUIZ06Q22">a high-voltage line</string>
+    <string name="quiz_answer_right_QUIZ06Q23">about 2.5 times as many</string>
+    <string name="quiz_answer_right_QUIZ06Q24">twice as much</string>
+    <string name="quiz_answer_right_QUIZ06Q25" formatted="false">12%</string>
+    <string name="quiz_answer_right_QUIZ06Q26">9,323</string>
+    <string name="quiz_answer_right_QUIZ06Q27">The Nile (Egypt)</string>
+    <string name="quiz_answer_right_QUIZ06Q28">300 million years</string>
+    <string name="quiz_answer_right_QUIZ06Q29">17.721 cent per kWh</string>
+    <string name="quiz_answer_right_QUIZ06Q30">8700</string>
+    <string name="quiz_tab">Quiz</string>
+    <string name="quiz_start_title">Current Quiz</string>
+    <string name="quiz_start_content">Answer some questions and see what others think!</string>
+    <string name="quiz_start_subtitle">What you need to know</string>
+    <string name="quiz_start_content2">Each month we ask you questions on energy and everyday life. There are different kinds of question types. Once you answered the question, you can also see what others answered! Simply try it! For each quiz you can earn a batch. Have fun!</string>
+    <string name="quiz_continue_button">Continue Quiz</string>
+    <string name="quiz_continue_content">Ahh, you are back to continue the Quiz! Have fun!</string>
+    <string name="quiz_continue_content2">Every month we ask you different questions on energy and life. Once you answered the question, you can also see what others answered! Don\'t be sad, if you get something wrong! For each quiz you can earn a batch. Have fun!</string>
+    <string name="quiz_continue_subtitle">What you need to know</string>
+    <string name="quiz_start_button">Start quiz</string>
+    <string name="quiz_quit_title">Quit the quiz\?</string>
+    <string name="quiz_quit_content">Until the next month starts, you can always return to where you left off. Simply click on the quiz button on the dashboard, or open your inbox message to continue playing.</string>
+    <string name="quiz_quit_return">Return to quiz</string>
+    <string name="quiz_quit_quit">Quit the quiz</string>
+    <string name="quiz_question_title1">Question</string>
+    <string name="quiz_question_title2">of</string>
+    <string name="quiz_question_others_answer">What others answered:</string>
+    <string name="quiz_next_question">Next question</string>
+    <string name="quiz_complete_title">You did great!</string>
+    <string name="quiz_complete_content">Super, you completed this quiz successfully and earned yourself a badge! \n We hope your stay motivated for the next month! Oh, and don\'t forget to defrost your freezer!</string>
+    <string name="quiz_complete_button">Close</string>
+    <string name="no_quiz_placeholder">No quiz available!</string>
+    <string name="message_mq01b_title">The latest quiz is ready for you! Have fun!</string>
+    <string name="message_mq01b_body">Answer the quiz questions and find out what you and other Ynni users know about energy! Have fun!</string>
+    <string name="message_mq01c_title">Don\'t forget to play the latest quiz!</string>
+    <string name="message_mq01c_body">Answer the remaining questions and win a badge! There are only few questions left!</string>
+    <string name="message_mq02b_title">The latest quiz is ready for you! Have fun!</string>
+    <string name="message_mq02b_body">Answer the quiz questions and find out what you and other Ynni users know about energy! Have fun!</string>
+    <string name="message_mq02c_title">Don\'t forget to play the latest quiz!</string>
+    <string name="message_mq02c_body">Answer the remaining questions and win a badge! There are only few questions left!</string>
+    <string name="message_mq03b_title">The latest quiz is ready for you! Have fun!</string>
+    <string name="message_mq03b_body">Answer the quiz questions and find out what you and other Ynni users know about energy! Have fun!</string>
+    <string name="message_mq03c_title">Don\'t forget to play the latest quiz!</string>
+    <string name="message_mq03c_body">Answer the remaining questions and win a badge! There are only a few questions left!</string>
+    <string name="message_mq04b_title">The latest quiz is ready for you to play! Have fun!</string>
+    <string name="message_mq04b_body">Answer the quiz questions and find out what you and other Ynni users know about the world of energy! Have fun!</string>
+    <string name="message_mq04c_title">Don\'t forget to play the latest version of this quiz!</string>
+    <string name="message_mq04c_body">Answer the remaining questions and win a badge! There are only a few questions left!</string>
+    <string name="message_mq05b_title">The latest quiz is ready for you to play! Have fun!</string>
+    <string name="message_mq05b_body">Answer the quiz questions and find out what you and other Ynni users know about the world of energy! Have fun!</string>
+    <string name="message_mq05c_title">Don\'t forget to play the latest version of this quiz!</string>
+    <string name="message_mq05c_body">Answer the remaining questions and win a badge! There are only few questions left!</string>
+    <string name="message_mq06b_title">The latest quiz is ready for you! Have fun!</string>
+    <string name="message_mq06b_body">Answer the quiz questions and find out what you and other Ynni users know about the world! Have fun!</string>
+    <string name="message_mq06c_title">Don\'t forget to play the latest quiz!</string>
+    <string name="message_mq06c_body">Answer the remaining questions and win a badge! There are only few questions left!</string>
+    <string name="message_m050_title">Change your profile setting carefully!</string>
+    <string name="message_m050_body">Your competitions can be affected by a change in the amount of your present appliances or your household size. Try to avoid changes in order to secure your latest status of the challenge. For more information, please have a look at the infobar in the about section of the competitions.</string>
+    <string name="message_m041r_title">Did you notice the new pie chart\?</string>
+    <string name="message_m041r_body">We are not only showing you your realtime usage. You can also see which activity is using electricity or gas.</string>
+    <string name="message_m042r_title">Did you notice the new tips\?</string>
+    <string name="message_m042r_body">Click on one of the activities in your pie chart. For example ‘Cooking’. We then show you a relevant tip. That gives you more information about saving energy on that specific activity.</string>
+    <string name="message_m044r_title">Give us your opinion and earn a badge!</string>
+    <string name="message_m044r_body">Do you have time to answer some questions with ‘thumb up’ or ‘thumb down’. Great, we are very curious about your opinion on the next 5 questions.</string>
+    <string name="message_mec01b_title">The competition starts today. Get ready!\n</string>
+    <string name="message_mec01b_body">We will give you a weekly update on your efficiency improvement. Your efficiency improvement is the difference between the efficiency from this month and the last one. Good luck!</string>
+    <string name="message_mec01b_cta">Click here for more information on the competition\n</string>
+    <string name="message_mec01d_title">The latest competition week is over!</string>
+    <string name="message_mec01d_body_l3">The %1$s competition week is over. How many points can you get when you continue to improve your %2$s efficiency\?</string>
+    <string name="message_mec01d_body_l4">The %1$s competition week is over. How do you do compared to other users in the %2$s competition\?</string>
+    <string name="message_mec01d_body_l5">The %1$s competition week is over. How many points can you get when you continue to improve your %2$s efficiency\?\nHow do you do compared to other users\?</string>
+    <string name="message_mec01d_cta">Check your results</string>
+    <string name="message_mec01f_title">The competition has finished</string>
+    <string name="message_mec01f_body_l3">Check your final results!</string>
+    <string name="message_mec01f_body_l4">Share your results with your friends!</string>
+    <string name="message_mec01f_body_l5">Share your results with your friends!</string>
+    <string name="message_mec100_title">The competition cannot be completed</string>
+    <string name="message_mec100_body">The competition %s is incomplete. Oops! We were not able to collect your data for more than 3 days. We\'re sorry! We do our best to display the progress of your achievements. Next month you will get another chance!\n</string>
+    <string name="message_mec100_cta">Go to competitions</string>
+    <string name="message_m045_cta">Click here</string>
+    <string name="snackbar_profile_saved_body">Your profile changes have been saved! Next month all functionalities will be updated!</string>
+    <string name="registration_error_title">Oops, something went wrong</string>
+    <string name="registration_error_102_msg">This email address or receiver unit is already in use. Please check again or contact customer service right away! To assist you properly, please share the following with customer service: (error</string>
+    <string name="registration_error_12X_msg">An unrecoverable error occurred. Please try again or contact customer service! To assist you properly, please share the following with customer service: (error</string>
+    <string name="registration_error_continue">Continue</string>
+    <string name="registration_error_toolbar_title">settings Ynni</string>
+    <string name="registration_error_description_first">Unable to complete the setup process. Please contact our Customer Service by phone or email:</string>
+    <string name="registration_error_description_second">We will help you complete the setup process. Please inform us about the following:</string>
+    <string name="registration_error_phone">0800 8888863</string>
+    <string name="registration_error_email">pilotstudie@innogy.com</string>
+    <string name="registration_error_code_label">Error #</string>
+    <string name="registration_error_close">Close</string>
+    <string name="registration_error_email_subject">Error</string>
+    <string name="registration_error_email_popup_title">Send email via:</string>
+    <string name="permission_phone_denied">Please give phone permission in application settings</string>
+    <string name="registration_error_email_text">"Sehr geehrtes Team der Pilotstudie,\nleider ist ein Fehler bei Nutzung der App unterlaufen! \nUm den Fall schnellstmöglich bearbeiten zu können, hier der Fehlercode und meine Angaben: "</string>
+    <string name="email_error_code">Fehlercode:</string>
+    <string name="email_useremail">E-Mail Adresse:</string>
+    <string name="email_macaddress">MAC address</string>
+    <string name="email_thank">Vielen Dank!</string>
+    <string name="error_account_not_exist">Account does not exist!</string>
+    <string name="efficiency_challenge_status_complete_body">Here you can see your end results</string>
+    <string name="efficiency_challenge_status_incomplete_body">Unfortunately, in this competition the connection between your smart meter and your receiver unit where interrupted for more than 3 days. This competition will be automatically determined but we try to provide you with your latest results.</string>
+    <string name="quiz_message_start">Start the quiz</string>
+    <string name="alert_cancel">Cancel</string>
+    <string name="alert_show_message">Show message</string>
+    <string name="terms_of_use_description">Please agree with the terms of use.</string>
+    <string name="efficiency_graph_week_axis">Wk</string>
+    <string name="terms_of_use_title">Terms of use</string>
+    <string name="img_challenge_popup_c001_graph">img_challenge_popup_c001_graph_en</string>
+    <string name="efficiency_graph_start">Start</string>
+    <string name="connected_with_meda_button">Connect your smartphone now</string>
+    <string name="welcome_checkbox_confirm_additional_part"></string>
+    <string name="standard_api_error_message">Something went wrong</string>
+    <string name="events_appliances_unknown_device">New appliance</string>
+    <string name="meda_station_connection_lost">Connection with receiver unit was lost</string>
+    <string name="unknown_user_layer">Unknown user layer</string>
+    <string name="first">first</string>
+    <string name="second">second</string>
+    <string name="third">third</string>
+    <string name="voucher_error_200">The layer assignment of this user does not allow use of this feature</string>
+    <string name="voucher_error_201">No voucher available for this user</string>
+    <string name="voucher_error_202">Voucher already created for this user</string>
+    <string name="voucher_error_203">Insufficient points to create a voucher for this user</string>
+    <string name="voucher_error_204">Voucher creation not yet possible; only possible after the last challenge has ended</string>
+    <plurals name="message_m100_1_body_content">
+        <item quantity="one">\u0020for %d hour,</item>
+        <item quantity="other">\u0020for %d hours,</item>
+    </plurals>
+    <string-array name="properties_size_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>50m² or less</item>
+        <item>50+ m²</item>
+        <item>100+ m²\n</item>
+        <item>150+ m²\n</item>
+    </string-array>
+    <string-array name="heating_universal_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Gas</item>
+        <item>Electric</item>
+        <item>Oil</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="washing_machine_electricity_array">
+        <item>This month your washing machine used %1$.1f %% %2$s than the washing machine of other Ynni users.</item>
+        <item>This month your washing machine used %1$.1f %% %2$s than the previous month.</item>
+        <item>In %1$s %2$s your washing machine used %3$.2f kWh of electricity. Other Ynni users used %4$.2f kWh. %5$s</item>
+        <item>In %1$s %2$s your washing machine used %3$.2f kWh of electricity. Last month you’ve used %4$.2f kWh. %5$s</item>
+    </string-array>
+    <string-array name="refrigeration_electricity_array">
+        <item>This month your refrigerator and/or freezer used %1$.1f %% %2$s than the refrigerators/freezers of other Ynni users.</item>
+        <item>This month your refrigerator and/or freezer used %1$.1f %% %2$s than the previous month.</item>
+        <item>In %1$s %2$s your refrigerator and/or freezer used %3$.2f kWh of electricity. Other Ynni users used %4$.2f kWh. %5$s</item>
+        <item>In %1$s %2$s your refrigerator and/or freezer used %3$.2f kWh of electricity. Last month you’ve used %4$.2f kWh. %5$s</item>
+    </string-array>
+    <string-array name="oven_electricity_array">
+        <item>This month your oven used %1$.1f %% %2$s than the oven of other Ynni users.</item>
+        <item>This month your oven used %1$.1f %% %2$s than the previous month.</item>
+        <item>In %1$s %2$s your oven used %3$.2f kWh of electricity. Other Ynni users used %4$.2f kWh. %5$s</item>
+        <item>In %1$s %2$s your oven used %3$.2f kWh of electricity. Last month you’ve used %4$.2f kWh. %5$s</item>
+    </string-array>
+    <string-array name="properties_type_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Detached</item>
+        <item>Semi-detached</item>
+        <item>Bungalow</item>
+        <item>Terraced</item>
+        <item>End-terrace</item>
+        <item>Flat</item>
+    </string-array>
+    <string-array name="heating_hob_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Gas</item>
+        <item>Electric</item>
+        <item>No Hob</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="occupants_num_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5+</item>
+    </string-array>
+    <string-array name="heating_water_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Gas boiler</item>
+        <item>Electric immersion heater</item>
+        <item>Solar</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="heating_oven_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Gas</item>
+        <item>Electric</item>
+        <item>No Oven</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="profile_dropdown_array" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="occupants_type_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Students</item>
+        <item>Working Adults</item>
+        <item>At Home Adults</item>
+        <item>Young Family</item>
+        <item>Older Family</item>
+        <item>Retirees</item>
+    </string-array>
+    <string-array name="properties_homeowner_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Owned</item>
+        <item>Rented</item>
+    </string-array>
+    <string-array name="heating_grill_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Gas</item>
+        <item>Electric</item>
+        <item>No Grill</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="dishwasher_electricity_array">
+        <item>This month your dishwasher used %1$.1f %% %2$s than the dishwasher of other Ynni users.</item>
+        <item>This month your dishwasher used %1$.1f %% %2$s than the previous month.</item>
+        <item>In %1$s %2$s your dishwasher used %3$.2f kWh of electricity. Other Ynni users used %4$.2f kWh. %5$s</item>
+        <item>In %1$s %2$s your dishwasher used %3$.2f kWh of electricity. Last month you’ve used %4$.2f kWh. %5$s</item>
+    </string-array>
+    <string-array name="total_electricity_usage_array">
+        <item>You have used %1$.1f %% %2$s electricity this month than other Ynni users.</item>
+        <item>You have used %1$.1f %% %2$s electricity this month than the previous month.</item>
+        <item>In %1$s %2$s you’ve used %3$.2f kWh of electricity. Other Ynni users used %4$.2f kWh. %5$s</item>
+        <item>In %1$s %2$s you’ve used %3$.2f kWh of electricity. Last month you’ve used %4$.2f kWh. %5$s</item>
+    </string-array>
+    <string-array name="dryer_electricity_array">
+        <item>This month your dryer used %1$.1f %% %2$s than the dryer of other Ynni users.</item>
+        <item>This month your dryer used %1$.1f %% %2$s than the previous month.</item>
+        <item>In %1$s %2$s your dryer used %3$.2f kWh of electricity. Other Ynni users used %4$.2f kWh. %5$s</item>
+        <item>In %1$s %2$s your dryer used %3$.2f kWh of electricity. Last month you’ve used %4$.2f kWh. %5$s</item>
+    </string-array>
+    <string-array name="total_gas_usage_array">
+        <item>You have used %1$.1f %% %2$s gas this month than other Ynni users.</item>
+        <item>You have used %1$.1f %% %2$s gas this month than the previous month.</item>
+        <item>In %1$s %2$s you’ve used %3$.2f %4$s of gas. Other Ynni users used %5$.2f %6$s. %7$s</item>
+        <item>In %1$s %2$s you’ve used %3$.2f %4$s of gas. Last month you’ve used %5$.2f %6$s. %7$s</item>
+    </string-array>
+    <string-array name="properties_age_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>pre-1919</item>
+        <item>1920-1975</item>
+        <item>1976-1999</item>
+        <item>post-2000</item>
+    </string-array>
+    <string-array name="heating_space_array">
+        <item>@string/selection_drop_down_hint</item>
+        <item>Gas boiler</item>
+        <item>Electric heaters</item>
+        <item>Heat pump</item>
+        <item>Oil boiler</item>
+        <item>Solar</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="always_on_electricity_array">
+        <item>This month your appliances in always on mode have used %1$.1f %% %2$s than appliances in always on mode of other Ynni users.</item>
+        <item>This month your appliances in always on mode have used %1$.1f %% %2$s than the previous month.</item>
+        <item>In %1$s %2$s you’ve had an electricity base load of %3$.2f kWh. Other Ynni users had %4$.2f kWh. %5$s</item>
+        <item>In %1$s %2$s you’ve had an electricity base load of %3$.2f kWh. Last month you had %4$.2f kWh. %5$s</item>
+    </string-array>
+    <string name="title_activity_on_boarding">On Boarding</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_activity_on_boarding">On Boarding</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_live_usage">Live Usage</string>
+    <string name="title_activity_qrscanner">Scan QR-Code</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_wrong_network_connected">WrongNetworkConnectedActivity</string>
-    <string name="title_activity_discover_network">Connecting to the SmartBridge&#8230;</string>
-    <string name="title_intro_connect_network">Connect to the SmartBridge</string>
+    <string name="title_activity_demo">DemoActivity</string>
+    <string name="title_activity_discover_network">Discovering...</string>
 </resources>

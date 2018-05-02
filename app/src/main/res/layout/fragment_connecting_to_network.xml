@@ -8,7 +8,7 @@
     tools:context="nl.wittig.net2grid.onboarding.fragments.LoadingNetworkFragment">
 
     <LinearLayout
-        android:id="@+id/id_verifyingframe"
+        android:id="@+id/verifyingframe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="70dp"
@@ -17,20 +17,21 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/id_verifying"
+            android:id="@+id/verifying"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="35sp"
             android:textColor="#fff"
             android:textAppearance="@style/TextAppearance.Helvetica.Light"
-            android:text="@string/verifying_connection" />
+            android:text="We are verifying your connection" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <com.bhargavms.dotloader.DotLoader
+            android:id="@+id/text_dot_loader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -41,7 +42,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/id_connectedframe"
+        android:id="@+id/connectedframe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="70dp"
@@ -56,7 +57,7 @@
             android:src="@drawable/icon_checkmark_blue"/>
 
         <TextView
-            android:id="@+id/id_connected"
+            android:id="@+id/connected"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -64,7 +65,7 @@
             android:textAppearance="@style/TextAppearance.Helvetica.Light"
             android:textSize="35sp"
             android:textColor="#fff"
-            android:text="@string/connected" />
+            android:text="Connected" />
 
     </LinearLayout>
 

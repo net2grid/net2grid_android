@@ -2,7 +2,6 @@ package nl.wittig.net2grid.onboarding.fragments;
 
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -27,7 +26,7 @@ import nl.wittig.net2grid.helpers.PersistentHelper;
 
 import static nl.wittig.net2grid.YnniApplication.SMARTBRIDGE_SERVICE_NAME;
 
-public class ResolvingNetworkFragment extends OnBoardingFragment {
+public class ResolvingNetworkFragment extends LoadingNetworkFragment {
 
     private static final String TAG = ResolvingNetworkFragment.class.getSimpleName();
 
@@ -50,22 +49,24 @@ public class ResolvingNetworkFragment extends OnBoardingFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_resolving_network, container, false);
+        return inflater.inflate(R.layout.fragment_resolving_network, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         ButterKnife.bind(this, view);
-
-        return view;
     }
 
     @Override
     protected void onFragmentVisible() {
         super.onFragmentVisible();
 
-        Log.i(TAG, "onFragmentVisible: resolvingnetworkfragment");
-
         resolveSmartBridge();
     }
 
+    @Override
     public void startCompletedAnimation(final int duration) {
 
         Animation animation = new AlphaAnimation(1f, 0f);
@@ -97,13 +98,7 @@ public class ResolvingNetworkFragment extends OnBoardingFragment {
                     @Override
                     public void onAnimationEnd(Animation animation) {
 
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                readyListener.onFragmentReady(ResolvingNetworkFragment.this, new FragmentResponse(FragmentResponseType.RESOLVED));
-                            }
-                        }, 300);
+                        readyListener.onFragmentReady(ResolvingNetworkFragment.this, new FragmentResponse(FragmentResponseType.RESOLVED));
                     }
 
                     @Override
@@ -131,7 +126,7 @@ public class ResolvingNetworkFragment extends OnBoardingFragment {
                 PersistentHelper.setSmartBridgeHost(ip.getHostAddress());
                 Api.resetApi();
 
-                ResolvingNetworkFragment.this.startCompletedAnimation(300);
+                startCompletedAnimation(300);
             }
 
             @Override

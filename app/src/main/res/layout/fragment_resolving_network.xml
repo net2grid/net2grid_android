@@ -42,13 +42,14 @@
         android:layout_gravity="center">
 
         <TextView
+            android:id="@+id/fragment_resolving_network_completed_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="35sp"
             android:textColor="#fff"
             android:textAppearance="@style/TextAppearance.Helvetica.Light"
-            android:text="@string/connected"/>
+            android:text="Connected!"/>
     </LinearLayout>
 
 </FrameLayout>

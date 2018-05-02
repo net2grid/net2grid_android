@@ -9,6 +9,7 @@
     tools:context="nl.wittig.net2grid.MainActivity">
 
     <com.bhargavms.dotloader.DotLoader
+        android:id="@+id/text_dot_loader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

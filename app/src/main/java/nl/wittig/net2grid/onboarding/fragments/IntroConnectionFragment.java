@@ -66,9 +66,6 @@ public class IntroConnectionFragment extends OnBoardingFragment {
         gotoWifiBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
             }
         });

@@ -1,13 +1,13 @@
 package nl.wittig.net2grid.liveUsage.fragments;
 
+import android.os.Handler;
+
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-
-import java.util.concurrent.TimeUnit;
 
 import nl.wittig.net2grid.R;
 import nl.wittig.net2grid.api.Api;
@@ -19,19 +19,8 @@ import retrofit2.Response;
 
 public class EnergyYearBarChartFragment extends LiveBarChartFragment {
 
+    private static final long REFRESH_INTERVAL = 10000;
     private String unit = "";
-
-    @Override
-    public long getRefreshInterval() {
-
-        return TimeUnit.SECONDS.toMillis(10);
-    }
-
-    @Override
-    protected int getChartColorResource() {
-
-        return R.color.elec_chart_color;
-    }
 
     @Override
     protected void setupChart() {
@@ -76,16 +65,16 @@ public class EnergyYearBarChartFragment extends LiveBarChartFragment {
                 if (response.isSuccessful() && meterResponse.status != null && meterResponse.status.equals("ok")) {
                     data = response.body().electricity.getConsumption().getMeterResults();
                     unit = meterResponse.electricity.getConsumption().getUnit();
-                    updateData();
+                    updateData(R.color.bar_chart);
                 }
 
-                scheduleFetchIfNeeded();
+                scheduleFetchIfNeeded(REFRESH_INTERVAL);
             }
 
             @Override
             public void onFailure(Call<MeterResponse> call, Throwable t) {
 
-                scheduleFetchIfNeeded();
+                scheduleFetchIfNeeded(REFRESH_INTERVAL);
             }
         });
     }

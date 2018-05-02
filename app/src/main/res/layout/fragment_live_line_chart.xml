@@ -39,7 +39,7 @@
                 android:gravity="center"
                 android:textSize="18sp"
                 android:textStyle="italic"
-                android:text="@string/no_data_searching"/>
+                android:text="no data available yet, \nwe need some time to collect the data"/>
 
         </LinearLayout>
     </FrameLayout>

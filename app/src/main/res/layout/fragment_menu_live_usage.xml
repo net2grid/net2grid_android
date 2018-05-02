@@ -17,9 +17,9 @@
             android:layout_height="wrap_content"
             android:textColor="#fff"
             android:textAppearance="@style/TextAppearance.Helvetica.Bold"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:gravity="center"
-            android:text="@string/connect_with_smartbridge"/>
+            android:text="Connect to SmartBridge"/>
 
     </LinearLayout>
 

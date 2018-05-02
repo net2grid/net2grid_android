@@ -17,10 +17,10 @@ import nl.wittig.net2grid.R;
 
 public class LoadingNetworkFragment extends OnBoardingFragment {
 
-    @BindView(R.id.id_verifying) TextView verifyingtext;
-    @BindView(R.id.id_connectedframe) LinearLayout connectedframe;
-    @BindView(R.id.id_verifyingframe) LinearLayout verifyingframe;
-    @BindView(R.id.id_connected) TextView connectedtext;
+    @BindView(R.id.verifying) TextView verifyingtext;
+    @BindView(R.id.connectedframe) LinearLayout connectedframe;
+    @BindView(R.id.verifyingframe) LinearLayout verifyingframe;
+    @BindView(R.id.connected) TextView connectedtext;
 
     public LoadingNetworkFragment() {
         // Required empty public constructor
@@ -31,11 +31,14 @@ public class LoadingNetworkFragment extends OnBoardingFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_connecting_to_network, container, false);
+        return inflater.inflate(R.layout.fragment_connecting_to_network, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         ButterKnife.bind(this, view);
-
-        return view;
     }
 
     public void startCompletedAnimation(final int duration) {

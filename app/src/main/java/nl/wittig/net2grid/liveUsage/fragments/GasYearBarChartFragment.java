@@ -1,5 +1,7 @@
 package nl.wittig.net2grid.liveUsage.fragments;
 
+import android.os.Handler;
+
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 
@@ -19,19 +21,9 @@ import retrofit2.Response;
 
 public class GasYearBarChartFragment  extends LiveBarChartFragment {
 
+    private static final long REFRESH_INTERVAL = TimeUnit.DAYS.toMillis(30);
+
     private String unit = "";
-
-    @Override
-    public long getRefreshInterval() {
-
-        return TimeUnit.DAYS.toMillis(30);
-    }
-
-    @Override
-    protected int getChartColorResource() {
-
-        return R.color.gas_chart_color;
-    }
 
     @Override
     protected void fetchData() {
@@ -45,16 +37,16 @@ public class GasYearBarChartFragment  extends LiveBarChartFragment {
                 if (response.isSuccessful() && meterResponse.status != null && meterResponse.status.equals("ok")) {
                     data = response.body().gas.getConsumption().getMeterResults();
                     unit = meterResponse.gas.getConsumption().getUnit();
-                    updateData();
+                    updateData(R.color.bar_gas_chart);
                 }
 
-                scheduleFetchIfNeeded();
+                scheduleFetchIfNeeded(REFRESH_INTERVAL);
             }
 
             @Override
             public void onFailure(Call<MeterResponse> call, Throwable t) {
 
-                scheduleFetchIfNeeded();
+                scheduleFetchIfNeeded(REFRESH_INTERVAL);
             }
         });
     }

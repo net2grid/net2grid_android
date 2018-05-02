@@ -76,7 +76,7 @@ public class ConnectToCorrectNetworkFragment extends OnBoardingFragment {
             return;
         }
 
-        if (name != null || name != null && !name.equals("")) {
+        if (name != null || !name.equals("")) {
 
             title.setText(getString(R.string.wrong_network_title, name));
         } else {

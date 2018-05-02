@@ -7,7 +7,6 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 
 import java.util.concurrent.TimeUnit;
 
-import nl.wittig.net2grid.R;
 import nl.wittig.net2grid.api.Api;
 import nl.wittig.net2grid.api.responses.MeterResponse;
 import retrofit2.Call;
@@ -16,19 +15,9 @@ import retrofit2.Response;
 
 public class PowerDayLineChartFragment extends LiveLineChartFragment {
 
+    private static final long REFRESH_INTERVAL = TimeUnit.MINUTES.toMillis(5);
+
     private String unit = "";
-
-    @Override
-    public long getRefreshInterval() {
-
-        return TimeUnit.MINUTES.toMillis(5);
-    }
-
-    @Override
-    protected int getChartColorResource() {
-
-        return R.color.elec_chart_color;
-    }
 
     @Override
     protected void setupChart() {
@@ -60,13 +49,13 @@ public class PowerDayLineChartFragment extends LiveLineChartFragment {
                     updateData();
                 }
 
-                scheduleFetchIfNeeded();
+                scheduleFetchIfNeeded(REFRESH_INTERVAL);
             }
 
             @Override
             public void onFailure(Call<MeterResponse> call, Throwable t) {
 
-                scheduleFetchIfNeeded();
+                scheduleFetchIfNeeded(REFRESH_INTERVAL);
             }
         });
     }

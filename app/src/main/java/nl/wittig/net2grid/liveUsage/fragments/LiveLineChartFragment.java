@@ -3,7 +3,6 @@ package nl.wittig.net2grid.liveUsage.fragments;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,11 +61,8 @@ public abstract class LiveLineChartFragment extends LiveChartFragment {
         setupChart();
     }
 
-    @Override
     protected void updateData()
     {
-        super.updateData();
-
         List<Entry> chartData = getChartData();
 
         if (chartData.size() > 0) {
@@ -78,7 +74,7 @@ public abstract class LiveLineChartFragment extends LiveChartFragment {
             dataSet.setDrawCircles(false);
             dataSet.setDrawValues(false);
             dataSet.setLineWidth(1f);
-            dataSet.setColor(ResourcesCompat.getColor(getResources(), getChartColorResource(), null));
+            dataSet.setColor(Color.parseColor("#37d1bb"));
 
             LineData lineData = new LineData(dataSet);
             lineChart.setData(lineData);
