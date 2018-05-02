@@ -4,49 +4,16 @@
     <color name="colorPrimaryDark">#1a2d3b</color>
     <color name="colorAccent">#529da8</color>
 
-    <color name="app_yellow">#D3D300</color>
-    <color name="app_yellow_dark">#8c8c01</color>
-    <color name="transparent_bar">#008c8c01</color>
-    <color name="grey_light_3">#333333</color>
     <color name="grey_dark">#666666</color>
-    <color name="grey_medium">#707070</color>
     <color name="grey">#999999</color>
-    <color name="grey_light">#DDDDDD</color>
     <color name="grey_slight">#EEEEEE</color>
-    <color name="black">@android:color/black</color>
-    <color name="dim_background">#96000000</color>
-    <color name="inavctive_text">@color/grey_light</color>
 
-    <color name="radio_unchecked">#fafafa</color>
-    <color name="bar_chart">#37d1bb</color>
-    <color name="bar_gas_chart">#F0636E</color>
+    <color name="elec_chart_color">#37d1bb</color>
+    <color name="gas_chart_color">#F0636E</color>
 
-    <color name="standard_textcolor">@color/grey_dark</color>
-    <color name="light_textcolor">@color/grey</color>
-    <color name="not_selected_dropdown_textcolor">@color/grey_light</color>
-    <color name="tabs_background">#f0f0f0</color>
-    <color name="tabs_divider">#78999999</color>
     <color name="message_counter_background">#e80507</color>
     <color name="red">@color/message_counter_background</color>
-    <color name="shadow_segmented">#d6d6d6</color>
-    <color name="chart_unkown_value_energy">#8dc5ce</color>
-    <color name="chart_unkown_value_gas">#e9e985</color>
-    <color name="chart_compare_value_energy">#146977</color>
-    <color name="chart_compare_unknown_value_energy">@color/chart_compare_value_energy</color>
-    <color name="chart_compare_value_gas">#9e9e00</color>
-    <color name="chart_compare_unknown_value_gas">@color/chart_compare_value_gas</color>
-    <color name="power_usage_chart_line_color">@color/colorPrimary</color>
-    <color name="past_disaggregation_dark">@color/grey_light_3</color>
-    <color name="base_disaggregation_chart_energy">@color/chart_compare_value_energy</color>
-    <color name="base_disaggregation_chart_gas">@color/chart_compare_unknown_value_gas</color>
-    <color name="error_snackbar_background">#B2000000</color>
-    <color name="efficiency_chart_color">#8CC5CF</color>
     <color name="white">#ffffff</color>
-
-    <color name="quiz_negative">#B82D57</color>
-    <color name="quiz_neutral">@color/colorPrimary</color>
-    <color name="quiz_positive">#009161</color>
-    <color name="quiz_empty">@color/white</color>
 
     <array name="dot_colors">
         <item>#637581</item>

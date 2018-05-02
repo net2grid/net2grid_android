@@ -5,10 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#213b4c"
     android:fitsSystemWindows="true"
-    tools:context="nl.wittig.net2grid.onboarding.fragments.LoadingNetworkFragment">
+    tools:context="nl.wittig.net2grid_ble.onboarding.fragments.LoadingNetworkFragment">
 
     <LinearLayout
-        android:id="@+id/verifyingframe"
+        android:id="@+id/id_verifyingframe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="70dp"
@@ -17,21 +17,20 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/verifying"
+            android:id="@+id/id_verifying"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="35sp"
             android:textColor="#fff"
             android:textAppearance="@style/TextAppearance.Helvetica.Light"
-            android:text="We are verifying your connection" />
+            android:text="@string/verifying_connection" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <com.bhargavms.dotloader.DotLoader
-            android:id="@+id/text_dot_loader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -42,7 +41,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/connectedframe"
+        android:id="@+id/id_connectedframe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="70dp"
@@ -57,7 +56,7 @@
             android:src="@drawable/icon_checkmark_blue"/>
 
         <TextView
-            android:id="@+id/connected"
+            android:id="@+id/id_connected"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -65,7 +64,7 @@
             android:textAppearance="@style/TextAppearance.Helvetica.Light"
             android:textSize="35sp"
             android:textColor="#fff"
-            android:text="Connected" />
+            android:text="@string/connected" />
 
     </LinearLayout>
 

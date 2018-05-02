@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nl.wittig.net2grid.liveUsage.fragments.LiveLineChartFragment">
+    tools:context="nl.wittig.net2grid_ble.liveUsage.fragments.LiveLineChartFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:gravity="center"
                 android:textSize="18sp"
                 android:textStyle="italic"
-                android:text="no data available yet, \nwe need some time to collect the data"/>
+                android:text="@string/no_data_searching"/>
 
         </LinearLayout>
     </FrameLayout>

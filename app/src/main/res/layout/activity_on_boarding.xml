@@ -7,7 +7,7 @@
     android:background="#213b4c"
     android:fitsSystemWindows="true">
 
-    <nl.wittig.net2grid.customView.UnswipeableViewPager
+    <nl.wittig.net2grid_ble.customView.UnswipeableViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

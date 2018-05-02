@@ -2,7 +2,7 @@
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_discover_network"
-    android:name="nl.wittig.net2grid.liveUsage.DiscoverNetworkActivityFragment"
+    android:name="nl.wittig.net2grid_ble.liveUsage.DiscoverNetworkActivityFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout="@layout/fragment_discover_network" />

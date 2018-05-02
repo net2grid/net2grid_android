@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_connect_to_correct_network_connected"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -18,7 +17,6 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_below="@id/fragment_connect_title"
                 android:id="@+id/fragment_connect_to_correct_network_connected_subtitles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,7 +76,7 @@
             android:textAppearance="@style/TextAppearance.Helvetica.Light"
             android:textColor="#fff"
             android:textStyle="normal"
-            android:text="Go to WiFi settings"/>
+            android:text="@string/goto_wifi_settings"/>
 
         <ImageView
             android:layout_width="wrap_content"
